@@ -32,10 +32,8 @@ export const Features = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-5xl font-bold">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {t('featuresTitle')}
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-black">
+            {t('featuresTitle')}
           </h2>
         </div>
 

@@ -37,10 +37,8 @@ export const Yields = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-bold">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  {t('yieldsTitle')}
-                </span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-black">
+                {t('yieldsTitle')}
               </h2>
               
               <p className="text-xl text-muted-foreground">

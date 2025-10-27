@@ -9,7 +9,7 @@ export const Header = () => {
           <div className="flex items-center gap-3">
             <img src={plixumLogo} alt="Plixum Logo" className="w-10 h-10" />
             <span className="text-2xl font-bold text-foreground">
-              PLIXUM
+              Plixum
             </span>
           </div>
           

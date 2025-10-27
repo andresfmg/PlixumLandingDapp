@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
             <img src={plixumLogo} alt="Plixum Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold text-foreground">PLIXUM</span>
+            <span className="text-xl font-bold text-foreground">Plixum</span>
           </div>
           
           <p className="text-sm text-muted-foreground text-center">

@@ -14,10 +14,8 @@ export const CTA = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl lg:text-6xl font-bold">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              {t('ctaTitle')}
-            </span>
+          <h2 className="text-4xl lg:text-6xl font-bold text-black">
+            {t('ctaTitle')}
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

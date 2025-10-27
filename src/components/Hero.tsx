@@ -21,10 +21,8 @@ export const Hero = () => {
               <span className="text-sm font-medium text-foreground">Powered by Solana DeFi</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                {t('heroTitle')}
-              </span>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-black">
+              {t('heroTitle')}
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-xl">

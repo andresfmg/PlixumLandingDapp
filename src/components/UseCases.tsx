@@ -36,11 +36,9 @@ export const UseCases = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-5xl font-bold">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-bold text-black">
               {t('useCasesTitle')}
-            </span>
-          </h2>
+            </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
