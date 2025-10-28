@@ -1,5 +1,6 @@
 import { LanguageSwitcher } from './LanguageSwitcher';
 import plixumLogo from '@/assets/plixum-logo.png';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -7,12 +8,13 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={plixumLogo} alt="Plixum Logo" className="w-10 h-10" />
+            <Link to="/">
+              <img src={plixumLogo} alt="Plixum Logo" className="w-10 h-10 cursor-pointer" />
+            </Link>
             <span className="text-2xl font-bold text-foreground">
               Plixum
             </span>
           </div>
-          
           <LanguageSwitcher />
         </div>
       </div>

@@ -11,10 +11,10 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Hero
-    heroTitle: 'Decentralized Financial Services Platform',
+  heroTitle: 'Smart Capital Evolution',
     heroSubtitle: 'Transform your stablecoin management with cutting-edge DeFi technology. Lower costs, instant liquidity, and accessible credit.',
-    heroCtaPrimary: 'Get Started',
-    heroCtaSecondary: 'Learn More',
+  heroCtaPrimary: 'Download on iPhone',
+  heroCtaSecondary: 'Download on Android',
     
     // Features
     featuresTitle: 'Why Choose Plixum?',
@@ -63,7 +63,7 @@ const translations = {
     business1Title: 'Multi-Currency Support',
     business1Desc: 'Accept payments in USDT, USDC, and other major stablecoins with instant conversion.',
     business2Title: 'Earn Yields on Deposits',
-    business2Desc: 'Generate up to 12% annual returns on your business deposits through secure DeFi protocols.',
+    business2Desc: 'Generate up to 6% annual returns on your business deposits through secure DeFi protocols.',
     business3Title: 'Mass Payouts',
     business3Desc: 'Pay suppliers, contractors, and employees globally with minimal fees and instant settlement.',
     business4Title: 'API Integration',
@@ -99,7 +99,7 @@ const translations = {
     yieldsTitle: 'Earn While You Hold',
     yieldsSubtitle: 'Your business deposits work for you',
     yieldsDesc: 'Generate competitive returns on your stablecoin deposits through secure, audited DeFi protocols. Withdraw anytime, no lock-up periods.',
-    yieldsApy: 'Up to 12% APY',
+    yieldsApy: 'Up to 6% APY',
     yieldsFeature1: 'No minimum deposit',
     yieldsFeature2: 'Daily compounding',
     yieldsFeature3: 'Withdraw anytime',
@@ -109,8 +109,8 @@ const translations = {
     // Hero
     heroTitle: 'Soluciones Digitales para un Mundo Globalizado',
     heroSubtitle: 'Transforma tu manejo de monedas estables con tecnología DeFi de vanguardia. Menores costos, liquidez instantánea y crédito accesible.',
-    heroCtaPrimary: 'Comenzar',
-    heroCtaSecondary: 'Conocer Más',
+  heroCtaPrimary: 'Descargar en iPhone',
+  heroCtaSecondary: 'Descargar en Android',
     
     // Features
     featuresTitle: '¿Por Qué Elegir Plixum?',
