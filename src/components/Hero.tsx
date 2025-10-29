@@ -44,29 +44,7 @@ export const Hero = () => {
               </Button>
             </div>
             
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-accent" />
-                  <p className="text-2xl font-bold text-foreground">70%</p>
-                </div>
-                <p className="text-sm text-muted-foreground">{t('stat1')}</p>
-              </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <Wallet className="h-5 w-5 text-accent" />
-                  <p className="text-2xl font-bold text-foreground">$310B</p>
-                </div>
-                <p className="text-sm text-muted-foreground">{t('stat2')}</p>
-              </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-accent" />
-                  <p className="text-2xl font-bold text-foreground">$157B</p>
-                </div>
-                <p className="text-sm text-muted-foreground">{t('stat3')}</p>
-              </div>
-            </div>
+            
           </div>
           
           <div className="relative">

@@ -11,7 +11,7 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Hero
-  heroTitle: 'Smart Capital Evolution',
+  heroTitle: 'Smart Capital in Motion',
     heroSubtitle: 'Transform your stablecoin management with cutting-edge DeFi technology. Lower costs, instant liquidity, and accessible credit.',
   heroCtaPrimary: 'Download on iPhone',
   heroCtaSecondary: 'Download on Android',
