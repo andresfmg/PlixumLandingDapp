@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLIXUM - Plataforma DeFi No Custodiada en Solana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Cover Page */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: -40px -20px 60px -20px;
+        }
+        
+        .cover h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .cover .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .cover .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 60px;
+        }
+        
+        .cover .version {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: auto;
+        }
+        
+        /* Typography */
+        h1 {
+            color: #2563eb;
+            font-size: 2rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2563eb;
+        }
+        
+        h2 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+        }
+        
+        h3 {
+            color: #1e40af;
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .bullet-list {
+            list-style-type: disc;
+        }
+        
+        .numbered-list {
+            list-style-type: decimal;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            background-color: #f3f4f6;
+        }
+        
+        tr:nth-child(even) td {
+            background-color: #e5e7eb;
+        }
+        
+        .table-green th {
+            background-color: #059669;
+        }
+        
+        .table-green td {
+            background-color: #ecfdf5;
+            border-color: #a7f3d0;
+        }
+        
+        .table-green tr:nth-child(even) td {
+            background-color: #d1fae5;
+        }
+        
+        /* Emphasis */
+        strong {
+            color: #1e40af;
+        }
+        
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        /* Page Break */
+        .page-break {
+            page-break-after: always;
+            margin: 60px 0;
+            border-bottom: 2px dashed #d1d5db;
+            padding-bottom: 40px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        /* Contact Box */
+        .contact-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-box p {
+            margin-bottom: 8px;
+            color: #6b7280;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cover h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cover .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .cover .tagline {
+                font-size: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+        }
+        
+        @media print {
+            .cover {
+                margin: 0;
+                page-break-after: always;
+            }
+            
+            .page-break {
+                page-break-after: always;
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="cover">
+        <h1>PLIXUM</h1>
+        <div class="subtitle">Plataforma DeFi No Custodiada en Solana</div>
+        <div class="tagline">Conectando Finanzas Tradicionales con Finanzas Descentralizadas</div>
+        <div class="version">Versión 1.0 | Noviembre 2025</div>
+    </div>
+
+    <div class="container">
+        <!-- EXECUTIVE SUMMARY -->
+        <section class="section">
+            <h1>Executive Summary</h1>
+            <p>Plixum es una plataforma avanzada de finanzas descentralizadas (DeFi) construida sobre la blockchain de Solana que integra servicios financieros tradicionales con protocolos descentralizados. A través de smart contracts basados en Program-Derived Addresses (PDA), Plixum ofrece a cada usuario control total sobre sus activos mientras proporciona acceso simplificado a productos financieros tanto en el ecosistema crypto como en el sistema bancario tradicional.</p>
+            
+            <h2>Puntos Clave</h2>
+            <ul class="bullet-list">
+                <li><strong>Arquitectura No Custodiada:</strong> Los usuarios mantienen control total de sus claves privadas y fondos</li>
+                <li><strong>Smart Contracts PDA:</strong> Cada usuario recibe un smart contract único en Solana</li>
+                <li><strong>Integración Multi-Protocolo:</strong> Acceso a Jupiter Lend, MarginFi, Solend, Raydium, Orca y más</li>
+                <li><strong>OnRamp/OffRamp LATAM:</strong> Soporte PSE (Colombia), SPEI (México), PIX (Brasil), CVU (Argentina)</li>
+                <li><strong>Banking USA:</strong> Cuentas virtuales con routing number y emisión de tarjetas Visa</li>
+                <li><strong>Yields Competitivos:</strong> Hasta 6% APY en stablecoins a través de protocolos DeFi</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- PROPUESTA DE VALOR -->
+        <section class="section">
+            <h1>Propuesta de Valor</h1>
+            
+            <h2>Visión</h2>
+            <p>Democratizar el acceso a servicios financieros avanzados eliminando la barrera entre finanzas tradicionales y descentralizadas.</p>
+            
+            <h2>Misión</h2>
+            <p>Proporcionar una plataforma segura, no custodiada y de fácil uso que conecte usuarios latinoamericanos con el ecosistema DeFi global y servicios bancarios modernos.</p>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- CARACTERÍSTICAS TÉCNICAS -->
+        <section class="section">
+            <h1>Características Técnicas Core</h1>
+            
+            <h2>1. Arquitectura No Custodiada</h2>
+            
+            <h3>Smart Contracts PDA (Program-Derived Address)</h3>
+            <ul class="bullet-list">
+                <li>Cada usuario obtiene un smart contract único generado mediante PDA en Solana</li>
+                <li>El usuario mantiene control total de sus claves privadas</li>
+                <li>Plixum NO tiene acceso a los fondos de los usuarios</li>
+                <li>Los smart contracts permiten interacciones automáticas con protocolos DeFi</li>
+                <li>Implementación mediante Anchor Framework en Rust</li>
+            </ul>
+            
+            <h3>Beneficios de la No Custodia</h3>
+            <ul class="bullet-list">
+                <li><strong>Seguridad máxima:</strong> Los fondos nunca están en control de terceros</li>
+                <li><strong>Transparencia total:</strong> Todas las transacciones son verificables on-chain</li>
+                <li><strong>Auto-soberanía financiera:</strong> El usuario es el único responsable de sus activos</li>
+                <li><strong>Sin riesgo de contraparte:</strong> No hay honey pot centralizado</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- PROTOCOLOS DEFI -->
+        <section class="section">
+            <h2>2. Integración con Protocolos DeFi</h2>
+            
+            <h3>Jupiter Lend Integration</h3>
+            <ul class="bullet-list">
+                <li>Préstamos y depósitos automatizados vía Cross-Program Invocation (CPI)</li>
+                <li>Operaciones de deposit/withdraw desde los PDAs de usuarios</li>
+                <li>Yield farming optimizado con múltiples pools</li>
+                <li>Gestión automatizada de colaterales</li>
+            </ul>
+            
+            <h3>Otros Protocolos Soportados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Protocolo</th>
+                        <th>Funcionalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Raydium</td>
+                        <td>AMM y liquidity pools</td>
+                    </tr>
+                    <tr>
+                        <td>Orca</td>
+                        <td>Swaps y concentrated liquidity</td>
+                    </tr>
+                    <tr>
+                        <td>MarginFi</td>
+                        <td>Lending protocol con apalancamiento</td>
+                    </tr>
+                    <tr>
+                        <td>Solend</td>
+                        <td>Money markets descentralizados</td>
+                    </tr>
+                    <tr>
+                        <td>Kamino</td>
+                        <td>Estrategias de yield automatizadas</td>
+                    </tr>
+                    <tr>
+                        <td>Jito</td>
+                        <td>Liquid staking y MEV rewards</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Arquitectura de Integración</h3>
+            <ul class="bullet-list">
+                <li>Smart routing para mejores tasas APY</li>
+                <li>Agregación de liquidez cross-protocol</li>
+                <li>Rebalanceo automático de posiciones</li>
+                <li>Dashboard unificado para múltiples protocolos</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- ONRAMP/OFFRAMP -->
+        <section class="section">
+            <h1>Puente con Finanzas Tradicionales</h1>
+            
+            <h2>3. OnRamp/OffRamp con Bitso</h2>
+            
+            <h3>OnRamp (Fiat → Crypto)</h3>
+            <table class="table-green">
+                <thead>
+                    <tr>
+                        <th>País</th>
+                        <th>Método de Pago</th>
+                        <th>Conversión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Colombia</td>
+                        <td>PSE (Pagos Seguros en Línea)</td>
+                        <td>COP → USDC/USDT/SOL</td>
+                    </tr>
+                    <tr>
+                        <td>México</td>
+                        <td>SPEI (Transferencias 24/7)</td>
+                        <td>MXN → Crypto en Solana</td>
+                    </tr>
+                    <tr>
+                        <td>Brasil</td>
+                        <td>PIX (Pagos instantáneos)</td>
+                        <td>BRL → Crypto en Solana</td>
+                    </tr>
+                    <tr>
+                        <td>Argentina</td>
+                        <td>CVU/Alias</td>
+                        <td>ARS → Crypto en Solana</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Flujo Técnico OnRamp</h3>
+            <ol class="numbered-list">
+                <li>Usuario inicia depósito en COP vía PSE en interfaz de Plixum</li>
+                <li>Bitso API procesa el pago y verifica KYC/AML</li>
+                <li>Bitso convierte COP → USDC en Solana</li>
+                <li>USDC se transfiere al PDA del usuario en Solana</li>
+                <li>Usuario tiene control inmediato de sus fondos</li>
+                <li>Puede deployar fondos a protocolos DeFi desde su PDA</li>
+            </ol>
+            
+            <h3>OffRamp (Crypto → Fiat)</h3>
+            <ul class="bullet-list">
+                <li>Retiro desde wallet Solana del usuario</li>
+                <li>Conversión automática: USDC/USDT/SOL → COP</li>
+                <li>Transferencia a cuenta bancaria vía PSE</li>
+                <li>Liquidación en 24-48 horas hábiles</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- BANKING USA -->
+        <section class="section">
+            <h2>4. Infraestructura Bancaria USA con Bridge.xyz</h2>
+            
+            <h3>Virtual Accounts con Routing Number</h3>
+            <ul class="bullet-list">
+                <li>Cada usuario obtiene una cuenta virtual USD en banco estadounidense</li>
+                <li>Routing number único para recibir ACH/Wire transfers</li>
+                <li>Integración directa con la red bancaria de USA</li>
+                <li>Custodia regulada bajo licencias bancarias USA</li>
+                <li>Conversión automática USD → Crypto en Solana</li>
+            </ul>
+            
+            <h3>Debit Card Issuance</h3>
+            <ul class="bullet-list">
+                <li>Emisión de tarjetas de débito Visa/Mastercard</li>
+                <li>Vinculadas al balance de stablecoins del usuario</li>
+                <li>Conversión automática crypto → fiat en punto de venta</li>
+                <li>Uso global para compras y retiros en cajeros</li>
+                <li>Control en tiempo real desde la app de Plixum</li>
+            </ul>
+            
+            <h3>Casos de Uso</h3>
+            <ul class="bullet-list">
+                <li><strong>Freelancers:</strong> Recibir pagos internacionales vía ACH → Auto-conversión a USDC</li>
+                <li><strong>Remesas:</strong> Envío de dinero USA → LATAM con menores comisiones</li>
+                <li><strong>Comercio:</strong> Aceptar pagos USD y mantenerlos en stablecoins</li>
+                <li><strong>Gastos Diarios:</strong> Usar tarjeta Visa respaldada por crypto balance</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- STACK TECNOLÓGICO -->
+        <section class="section">
+            <h1>Stack Tecnológico</h1>
+            
+            <h2>Blockchain Layer</h2>
+            <ul class="bullet-list">
+                <li>Blockchain: Solana (alta velocidad, bajas comisiones)</li>
+                <li>Smart Contracts: Rust + Anchor Framework</li>
+                <li>Wallet Integration: Phantom, Solflare, Backpack</li>
+                <li>Program Architecture: PDA-based smart contracts</li>
+                <li>RPC Providers: Helius, QuickNode, Triton</li>
+            </ul>
+            
+            <h2>Backend</h2>
+            <ul class="bullet-list">
+                <li>Runtime: Node.js / TypeScript</li>
+                <li>Web3 Integration: @solana/web3.js, @coral-xyz/anchor</li>
+                <li>APIs Externas: Bitso Business API, Bridge.xyz API, Jupiter API</li>
+            </ul>
+            
+            <h2>Database & Infrastructure</h2>
+            <ul class="bullet-list">
+                <li>Primary: PostgreSQL (datos transaccionales)</li>
+                <li>Cache: Redis (sesiones, rates en tiempo real)</li>
+                <li>Cloud Provider: AWS/GCP/Azure</li>
+                <li>Container Orchestration: Docker + Kubernetes</li>
+            </ul>
+            
+            <h2>Security</h2>
+            <ul class="bullet-list">
+                <li>Authentication: OAuth 2.0 + JWT</li>
+                <li>Encryption: End-to-end encryption</li>
+                <li>Key Management: Hardware Security Modules (HSM)</li>
+                <li>Smart Contract Audits: Auditorías de seguridad</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- VENTAJAS COMPETITIVAS -->
+        <section class="section">
+            <h1>Ventajas Competitivas</h1>
+            
+            <h2>No Custodia Real</h2>
+            <p>A diferencia de exchanges centralizados, Plixum NUNCA tiene acceso a fondos de usuarios. No hay honey pot centralizado, seguridad superior y transparencia total on-chain.</p>
+            
+            <h2>Integración Completa Tradicional-Crypto</h2>
+            <p>Única plataforma que combina: DeFi protocols, Banking USA (routing number + cards), y OnRamp/OffRamp multi-país LATAM con experiencia sin fricciones.</p>
+            
+            <h2>Tecnología Solana</h2>
+            <p>Transacciones en segundos, costos de gas &lt;$0.01, escalabilidad probada (miles de TPS), y ecosistema DeFi vibrante en crecimiento.</p>
+            
+            <h2>Multi-Protocol Aggregation</h2>
+            <p>Acceso a mejores rates via smart routing, diversificación automática de riesgo, y single dashboard para múltiples protocolos.</p>
+            
+            <h2>Enfoque en LATAM</h2>
+            <p>Métodos de pago locales (PSE, SPEI, PIX), soporte en español y portugués, entendimiento del mercado local y compliance regulatorio.</p>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- ROADMAP -->
+        <section class="section">
+            <h1>Roadmap de Desarrollo</h1>
+            
+            <h2>Fase 1: MVP (Meses 1-4) - ACTUAL</h2>
+            <ul class="bullet-list">
+                <li>✓ Smart contracts PDA en Solana</li>
+                <li>✓ Integración Jupiter Lend (CPI)</li>
+                <li>⏳ Integración Bridge.xyz (Virtual accounts + Cards)</li>
+                <li>⏳ Integración Bitso (OnRamp PSE Colombia)</li>
+                <li>⏳ Web app básica con wallet connection</li>
+                <li>⏳ KYC flow básico</li>
+            </ul>
+            
+            <h2>Fase 2: Beta Privado (Meses 5-6)</h2>
+            <ul class="bullet-list">
+                <li>Testing con usuarios seleccionados en Colombia</li>
+                <li>Refinamiento UX/UI basado en feedback</li>
+                <li>Optimización de costos y tiempos de transacción</li>
+                <li>Auditoría de smart contracts</li>
+                <li>Stress testing de infraestructura</li>
+            </ul>
+            
+            <h2>Fase 3: Lanzamiento Público Colombia (Mes 7-9)</h2>
+            <ul class="bullet-list">
+                <li>Lanzamiento oficial en Colombia</li>
+                <li>Marketing y adquisición de usuarios</li>
+                <li>Soporte 24/7</li>
+                <li>Mobile app (iOS + Android)</li>
+                <li>Integración con más protocolos DeFi</li>
+            </ul>
+            
+            <h2>Fase 4: Expansión Regional (Meses 10-12)</h2>
+            <ul class="bullet-list">
+                <li>Expansión a México (SPEI integration)</li>
+                <li>Expansión a Brasil (PIX integration)</li>
+                <li>Más opciones de yield (staking, liquidity mining)</li>
+                <li>Programa de referidos y rewards</li>
+            </ul>
+            
+            <h2>Fase 5: Productos Avanzados (Año 2)</h2>
+            <ul class="bullet-list">
+                <li>Lending/Borrowing con colateral</li>
+                <li>Derivados y productos estructurados</li>
+                <li>Cuentas corporativas y API B2B</li>
+                <li>Expansion a Argentina y otros países LATAM</li>
+                <li>Integración multi-chain</li>
+            </ul>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- CONCLUSIÓN -->
+        <section class="section">
+            <h1>Conclusión</h1>
+            <p>Plixum representa la evolución natural de las finanzas: <strong>la convergencia entre el sistema bancario tradicional y las finanzas descentralizadas</strong>, manteniendo los principios fundamentales de DeFi (no custodia, transparencia, auto-soberanía) mientras elimina las barreras de entrada que han frenado la adopción masiva.</p>
+            
+            <p>Al construir sobre Solana, integrar con los mejores proveedores de infraestructura (Bitso, Bridge.xyz) y conectar múltiples protocolos DeFi, Plixum ofrece una experiencia única en el mercado: <strong>una plataforma donde puedes recibir tu salario en USA, generar yield en DeFi, y pagar tu café con una tarjeta Visa, todo sin que nadie más controle tu dinero.</strong></p>
+            
+            <p>La combinación de:</p>
+            <ul class="bullet-list">
+                <li>Arquitectura no custodiada verdadera</li>
+                <li>Integración completa fiat-crypto</li>
+                <li>Tecnología Solana de alto rendimiento</li>
+                <li>Enfoque en mercado latinoamericano</li>
+                <li>Cumplimiento regulatorio robusto</li>
+            </ul>
+            
+            <p>...posiciona a Plixum como el puente definitivo entre el mundo financiero tradicional y el futuro descentralizado de las finanzas.</p>
+            
+            <div class="contact-box">
+                <h2>Contacto</h2>
+                <p>Para más información sobre Plixum, asociaciones estratégicas o inversión:</p>
+                <p><strong>Email:</strong> [email protected]</p>
+                <p><strong>Web:</strong> plixum.com</p>
+                <p><strong>Twitter:</strong> @plixum</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

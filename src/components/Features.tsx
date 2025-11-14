@@ -29,7 +29,7 @@ export const Features = () => {
     {
       icon: BarChart3,
       title: 'Competitive Yields',
-      description: '3–15% APY on stablecoins through DeFi protocols.',
+      description: 'Up to 6% APY on stablecoins through DeFi protocols.',
     },
     {
       icon: Zap,
