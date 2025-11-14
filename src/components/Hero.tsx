@@ -19,19 +19,11 @@ export const Hero = () => {
             {/* Powered by Solana DeFi removed as requested */}
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-black">
-              Plixum: The Non-Custodial DeFi Platform Bridging LATAM and US Banking
+              Move Smart, Earn Fast
             </h1>
             <p className="text-xl text-muted-foreground max-w-xl">
-              Advanced decentralized finance on Solana. True user ownership, multi-protocol yield, seamless onramp/offramp for LATAM, and US virtual accounts with debit cards. Experience secure, transparent, and borderless financial services.
+              Advanced decentralized finance on Blockchain. True user ownership, multi-protocol yield, seamless onramp/offramp for LATAM, and US virtual accounts with debit cards. Experience secure, transparent, and borderless financial services.
             </p>
-            <ul className="mt-6 mb-8 space-y-2 text-lg text-black font-medium">
-              <li>• <strong>Non-Custodial Architecture:</strong> You control your keys and funds—always.</li>
-              <li>• <strong>Multi-Protocol Integration:</strong> Access Jupiter Lend, MarginFi, Solend, Raydium, Orca, and more.</li>
-              <li>• <strong>LATAM On/Off Ramp:</strong> PSE (Colombia), SPEI (Mexico), PIX (Brazil), CVU (Argentina).</li>
-              <li>• <strong>US Banking:</strong> Virtual USD accounts, ACH/Wire, and Visa debit cards via Bridge.xyz.</li>
-              <li>• <strong>Competitive Yields:</strong> 3–15% APY on stablecoins through DeFi protocols.</li>
-              <li>• <strong>Built on Solana:</strong> Fast, low-cost, and scalable blockchain infrastructure.</li>
-            </ul>
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" className="gap-2">
                 <span className="inline-block align-middle">

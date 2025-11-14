@@ -1,4 +1,4 @@
-import { TrendingDown, Zap, CreditCard, PiggyBank } from 'lucide-react';
+import { KeyRound, Layers, Globe, CreditCard, BarChart3, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -7,24 +7,34 @@ export const Features = () => {
 
   const features = [
     {
-      icon: TrendingDown,
+      icon: KeyRound,
       title: t('feature1Title'),
       description: t('feature1Desc'),
     },
     {
-      icon: Zap,
+      icon: Layers,
       title: t('feature2Title'),
       description: t('feature2Desc'),
     },
     {
-      icon: CreditCard,
+      icon: Globe,
       title: t('feature3Title'),
       description: t('feature3Desc'),
     },
     {
-      icon: PiggyBank,
+      icon: CreditCard,
       title: t('feature4Title'),
       description: t('feature4Desc'),
+    },
+    {
+      icon: BarChart3,
+      title: 'Competitive Yields',
+      description: '3–15% APY on stablecoins through DeFi protocols.',
+    },
+    {
+      icon: Zap,
+      title: 'Built on Solana',
+      description: 'Fast, low-cost, and scalable blockchain infrastructure.',
     },
   ];
 
@@ -37,7 +47,7 @@ export const Features = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
