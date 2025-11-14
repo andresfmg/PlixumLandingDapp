@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
 import PolicySagrilaft from "./pages/PolicySagrilaft";
+import KycComplete from "./pages/KycComplete";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/policy-sagrilaft" element={<PolicySagrilaft />} />
+            <Route path="/kyc-complete" element={<KycComplete />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
