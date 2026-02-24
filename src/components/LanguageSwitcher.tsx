@@ -10,10 +10,10 @@ export const LanguageSwitcher = () => {
       variant="ghost"
       size="sm"
       onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-      className="gap-2"
+      className="gap-2 text-white hover:text-cyan-400 hover:bg-white/5 font-semibold text-sm"
     >
       <Globe className="h-4 w-4" />
-      <span className="font-medium">{language === 'en' ? 'ES' : 'EN'}</span>
+      <span>{language === 'en' ? 'ES' : 'EN'}</span>
     </Button>
   );
 };

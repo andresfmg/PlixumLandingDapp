@@ -1,33 +1,23 @@
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
-import { Features } from '@/components/Features';
-import { BusinessAccounts } from '@/components/BusinessAccounts';
-import { Yields } from '@/components/Yields';
-import { HowItWorks } from '@/components/HowItWorks';
-import { Markets } from '@/components/Markets';
-import { UseCases } from '@/components/UseCases';
-import { Solutions } from '@/components/Solutions';
-import { CTA } from '@/components/CTA';
-import { Footer } from '@/components/Footer';
+import { Hero } from '@/components/finity/Hero';
+import { Solutions } from '@/components/finity/Solutions';
+import { Markets } from '@/components/finity/Markets';
+import { APISection } from '@/components/finity/APISection';
+import { CTA } from '@/components/finity/CTA';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const Index = () => {
   return (
     <LanguageProvider>
-      <div className="min-h-screen">
+      <div className="bg-black text-white min-h-screen">
         <Header />
         <main>
           <Hero />
-          <Features />
-          <BusinessAccounts />
-          <Yields />
-          <HowItWorks />
-          <Markets />
-          <UseCases />
           <Solutions />
+          <Markets />
+          <APISection />
           <CTA />
         </main>
-        <Footer />
       </div>
     </LanguageProvider>
   );

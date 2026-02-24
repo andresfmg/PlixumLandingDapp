@@ -2,47 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Definition of the design system based on Finity. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL or HEX.
 */
 
 @layer base {
   :root {
+    /* Typography */
+    --plus-jakarta: "Plus Jakarta Sans", sans-serif;
+    --h1: 60px;
+    --h2: 50px;
+    --h3: 48px;
+    --h4: 38px;
+    --h5: 28px;
+    --paragraph: 16px;
+    --button-large: 20px;
+    --button-medium: 16px;
+    --button-small: 14px;
+    --subheading: 14px;
+    --paragraph-small: 14px;
+
+    /* Brand Colors */
+    --brand-green: #6ceac7;
+    --brand-cyan: #2cdbff;
+    --brand-dark: #171624;
+    --brand-white: #ffffff;
+
+    /* Layout - Finity Strategy: generous margins in EM units */
+    --padding-section-y: 80px;
+    --padding-section-x: 100px;
+    --gap-large: 40px;
+    --gap-medium: 32px;
+    --gap-small: 24px;
+    --gap-xs: 16px;
+    --gap-xxs: 10px;
+
+    /* Finity-style margins (in EM) for maximum whitespace */
+    --margin-section-vertical-lg: 10em;    /* Like .container-soluciones_text: 10em top/bottom */
+    --margin-section-vertical-md: 7em;     /* Like .home-scroll_visual: 7em top/bottom */
+    --margin-section-horizontal-lg: 6em;   /* Like .home-scroll_text-wrap: 6em left/right */
+    --margin-section-horizontal-md: 4em;   /* Like .home-scroll_visual: 4em left/right */
+    --margin-viewport-vertical: 30vh;      /* Like .home-scroll_text-wrap: 30vh top/bottom */
+
+    /* Legacy colors (keeping for compatibility) */
     --background: 240 20% 99%;
     --foreground: 0 0% 5%;
-
     --card: 0 0% 100%;
     --card-foreground: 240 20% 10%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 240 20% 10%;
-
     --primary: 265 85% 58%;
     --primary-foreground: 0 0% 100%;
-    
     --primary-glow: 280 90% 65%;
     --accent-cyan: 190 95% 55%;
     --accent-blue: 220 90% 60%;
-
     --secondary: 240 15% 95%;
     --secondary-foreground: 240 20% 10%;
-
     --muted: 240 10% 96%;
     --muted-foreground: 240 10% 45%;
-
     --accent: 190 95% 55%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-
     --border: 240 15% 92%;
     --input: 240 15% 92%;
     --ring: 265 85% 58%;
-
     --radius: 0.75rem;
-
-  --gradient-primary: linear-gradient(180deg, #27A3FE 0%, #11CABE 100%);
+    --gradient-primary: linear-gradient(180deg, #27A3FE 0%, #11CABE 100%);
     --gradient-hero: linear-gradient(180deg, hsl(240 20% 99%), hsl(265 85% 98%));
     --shadow-glow: 0 0 40px hsl(265 85% 58% / 0.25);
     --shadow-card: 0 8px 30px hsl(240 20% 10% / 0.08);
@@ -84,6 +110,139 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  /* Finity-style full-width section */
+  .finity-section {
+    width: 100%;
+  }
+
+  /* Inner container for section content: Finity-style responsive widths with % units */
+  .finity-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1440px;
+  }
+
+  /* Responsive adjustments: Finity uses % instead of fixed px for true responsiveness */
+  /* Desktop ULTRA: 1600px+ - uses ~2.5% margins on each side = 95% content width */
+  @media (min-width: 1600px) {
+    .finity-container {
+      width: 95%;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* Desktop: 1440px-1599px - uses ~3% margins on each side = 94% content width */
+  @media (max-width: 1599px) and (min-width: 1440px) {
+    .finity-container {
+      width: 94%;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* Large tablets: 1024px-1439px - 92% width = ~4% margins each side */
+  @media (max-width: 1439px) and (min-width: 1024px) {
+    .finity-container {
+      width: 92%;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* Medium tablets: 768px-1023px - 92% width = ~4% margins each side */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .finity-container {
+      width: 92%;
+      max-width: none;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Typography for tablet */
+    h1 {
+      font-size: 48px !important;
+    }
+
+    h2 {
+      font-size: 40px !important;
+    }
+
+    h3 {
+      font-size: 36px !important;
+    }
+  }
+
+  /* Mobile landscape: 480px-767px - 94% width = ~3% margins each side */
+  @media (max-width: 767px) {
+    .finity-container {
+      width: 94%;
+      max-width: none;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    h2 {
+      font-size: 40px !important;
+    }
+
+    h3 {
+      font-size: 36px !important;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+  }
+
+  /* Mobile portrait: max-width 479px - 95% width = ~2.5% margins each side */
+  @media (max-width: 479px) {
+    .finity-container {
+      width: 95%;
+      max-width: none;
+    }
+    .finity-container[style*="paddingLeft"],
+    .finity-container[style*="paddingRight"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    h1 {
+      font-size: 28px !important;
+      line-height: 1.1 !important;
+    }
+
+    h2 {
+      font-size: 24px !important;
+    }
+
+    h3 {
+      font-size: 20px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -93,3 +252,95 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Light Theme Styles */
+html.light-theme {
+  /* Update CSS variables for light theme */
+  --brand-dark: #ffffff;
+  --brand-white: #171624;
+  
+  /* Light theme colors */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+}
+
+/* Light Theme Component Overrides */
+html.light-theme section {
+  background-color: #ffffff !important;
+  color: #171624 !important;
+}
+
+/* Header always stays dark */
+html.light-theme header {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.light-theme header .text-white {
+  color: #ffffff !important;
+}
+
+html.light-theme header .hover\:text-cyan-400:hover {
+  color: #2cdbff !important;
+}
+
+html.light-theme .bg-black {
+  background-color: #ffffff !important;
+  color: #171624 !important;
+}
+
+html.light-theme header.bg-black {
+  background-color: #000000 !important;
+}
+
+html.light-theme .text-white {
+  color: #171624 !important;
+}
+
+html.light-theme .text-black {
+  color: #ffffff !important;
+}
+
+html.light-theme .bg-gradient-to-r {
+  /* Keep gradient buttons */
+  background-image: linear-gradient(to right, #2cdbff, #6ceac7) !important;
+}
+
+html.light-theme .border-white {
+  border-color: #171624 !important;
+}
+
+html.light-theme .border-white\/10 {
+  border-color: rgba(23, 22, 36, 0.1) !important;
+}
+
+html.light-theme .bg-white\/10,
+html.light-theme [style*="background: rgba(215, 215, 215, 0.15)"] {
+  background-color: rgba(23, 22, 36, 0.05) !important;
+}
+
+html.light-theme .hover\:text-cyan-400:hover,
+html.light-theme .hover\:text-gray-300:hover {
+  color: #2cdbff !important;
+}
+
+html.light-theme .text-white\/70 {
+  color: rgba(23, 22, 36, 0.7) !important;
+}
+
+html.light-theme .border-white\/20 {
+  border-color: rgba(23, 22, 36, 0.2) !important;
+}
+
+/* Light theme for gradients and overlays */
+html.light-theme .opacity-5 {
+  opacity: 0.02 !important;
+}
+
+html.light-theme .bg-clip-text {
+  background-image: linear-gradient(to right, #2cdbff, #6ceac7) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+

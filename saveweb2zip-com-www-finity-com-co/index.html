@@ -1,0 +1,1126 @@
+<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Feb 05 2026 16:31:24 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.finity.com.co" data-wf-page="6840945247cd2c16f5379c4d" data-wf-site="6840945247cd2c16f5379c44" lang="es"><head>
+    <meta charset="utf-8">
+    <title>Finity – Tu plataforma para operaciones globales en USD, EUR y COP</title>
+    <link rel="alternate" hreflang="x-default" href="https://www.finity.com.co/es">
+    <link rel="alternate" hreflang="es" href="https://www.finity.com.co/es">
+    <link rel="alternate" hreflang="en" href="https://www.finity.com.co/en-us">
+    <meta content="Abre cuentas en USD, EUR y COP con Finity. Recibe pagos internacionales, convierte divisas, transfiere fondos y gestiona tarjetas desde un solo portal y API." name="description">
+    <meta content="Finity – Tu plataforma para operaciones globales en USD, EUR y COP" property="og:title">
+    <meta content="Abre cuentas en USD, EUR y COP con Finity. Recibe pagos internacionales, convierte divisas, transfiere fondos y gestiona tarjetas desde un solo portal y API." property="og:description">
+    <meta content="images/685086423e9023484e8ff2fb_Opengraph.png" property="og:image">
+    <meta content="Finity – Tu plataforma para operaciones globales en USD, EUR y COP" property="twitter:title">
+    <meta content="Abre cuentas en USD, EUR y COP con Finity. Recibe pagos internacionales, convierte divisas, transfiere fondos y gestiona tarjetas desde un solo portal y API." property="twitter:description">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="css/finity-web.webflow.shared.84dac6b3d.css" rel="stylesheet" type="text/css" crossorigin="anonymous">
+    <style>
+      @media (max-width:991px) and (min-width:768px) {
+        html.w-mod-js:not(.w-mod-ix) [data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6"] {
+          opacity: 0;
+        }
+      }
+
+      @media (max-width:767px) and (min-width:480px) {
+        html.w-mod-js:not(.w-mod-ix) [data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6"] {
+          opacity: 0;
+        }
+      }
+
+      @media (max-width:479px) {
+        html.w-mod-js:not(.w-mod-ix) [data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6"] {
+          opacity: 0;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+    <script src="js/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Plus Jakarta Sans:300,400,500,600,700"]
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+    <link href="images/685085efa6c390ab148f0b6e_Favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/685086103b23e47007c877a1_Webclip.png" rel="apple-touch-icon"><!-- Google Consent Mode: cookies denegadas por defecto -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+
+    <!-- Osano CookieConsent (banner) -->
+    <link rel="stylesheet" href="css/cookieconsent.min.css">
+    <script src="js/cookieconsent.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+        // Función para detectar el idioma actual
+        function detectLanguage() {
+          // Método 1: Detectar por URL (si tienes /es o /en en la URL)
+          const path = window.location.pathname;
+          if (path.startsWith('/en')) {
+            return 'en';
+          } else if (path.startsWith('/es')) {
+            return 'es';
+          }
+
+          // Método 2: Detectar por atributo lang del HTML
+          const htmlLang = document.documentElement.lang;
+          if (htmlLang && htmlLang.startsWith('en')) {
+            return 'en';
+          }
+
+          // Método 3: Detectar por idioma del navegador como fallback
+          const browserLang = navigator.language || navigator.userLanguage;
+          if (browserLang && browserLang.startsWith('en')) {
+            return 'en';
+          }
+
+          // Por defecto español
+          return 'es';
+        }
+
+        // Traducciones
+        const translations = {
+          es: {
+            message: 'Usamos cookies para mejorar tu experiencia.',
+            allow: 'Aceptar',
+            deny: 'Rechazar'
+          },
+          en: {
+            message: 'We use cookies to improve your experience.',
+            allow: 'Accept',
+            deny: 'Reject'
+          }
+        };
+
+        // Detectar idioma actual
+        const currentLang = detectLanguage();
+        const texts = translations[currentLang];
+
+        // Inicializar el banner con el idioma correspondiente
+        window.cookieconsent.initialise({
+          /* — Texto y botones — */
+          type: 'opt-in',
+          palette: {
+            popup: {
+              background: '#2e2e2e',
+              text: '#ffffff'
+            },
+            button: {
+              background: '#2bdaff',
+              text: '#171624'
+            } /* se sobrescribe vía CSS */
+          },
+          theme: 'classic',
+          position: 'bottom-right',
+          content: {
+            message: texts.message,
+            allow: texts.allow,
+            deny: texts.deny,
+            link: ''
+          },
+          /* — Gestión de consentimiento / GTM — */
+          onInitialise: gestionaConsent,
+          onStatusChange: gestionaConsent
+        });
+
+        function gestionaConsent() {
+          if (this.hasConsented && this.hasConsented()) {
+            cargaGTM();
+            gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted'
+            });
+          } else {
+            gtag('consent', 'update', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied'
+            });
+          }
+        }
+
+        function cargaGTM() {
+          if (window._gtmLoaded) return;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-M9Z4ZLQC'; /* ← tu ID */
+          document.head.appendChild(s);
+          window._gtmLoaded = true;
+        }
+      });
+    </script>
+
+    <!-- ---------- ESTILOS PERSONALIZADOS SOLO PARA EL BANNER ---------- -->
+    <style>
+      /* Fuente */
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+      /* Quitar "Learn more" */
+      .cc-window .cc-link {
+        display: none !important;
+      }
+
+      /* ===== CONTENEDOR BANNER (desktop + móviles "normales") ===== */
+      .cc-window {
+        background: rgba(46, 46, 46, 0.75) !important;
+        /* Sombras (orden solicitado) */
+        box-shadow:
+          -0.5px -0.5px 0 rgba(255, 255, 255, 0.30),
+          0.5px 0.5px 2px rgba(47, 63, 87, 0.30),
+          0 4px 25px rgba(0, 0, 0, 0.10);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        border-radius: 16px !important;
+        max-width: 420px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        padding: 24px !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+      }
+
+      /* ===== BOTONES ===== */
+      .cc-window .cc-compliance {
+        display: flex;
+        flex-direction: row-reverse;
+        /* Aceptar queda visualmente a la izquierda */
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cc-window .cc-btn {
+        border-radius: 100px !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-weight: 600;
+        padding: 0.55em 1.75em;
+        text-decoration: none !important;
+        transition: all 0.3s ease-in-out !important;
+      }
+
+      /* Aceptar (pegado al borde izq.) */
+      .cc-window .cc-btn.cc-allow {
+        margin-left: 0 !important;
+        background: linear-gradient(90deg, #2bdaff 0%, #6ceac7 100%) !important;
+        color: #171624 !important;
+        border: none !important;
+      }
+
+      .cc-window .cc-btn.cc-allow:hover,
+      .cc-window .cc-btn.cc-allow:focus {
+        background: linear-gradient(90deg, #171624 0%, #2bdaff 100%) !important;
+        color: #ffffff !important;
+      }
+
+      /* Rechazar */
+      .cc-window .cc-btn.cc-deny {
+        background: transparent !important;
+        color: #ffffff !important;
+        border: 2px solid #ffffff !important;
+      }
+
+      .cc-window .cc-btn.cc-deny:hover,
+      .cc-window .cc-btn.cc-deny:focus {
+        background: #ffffff !important;
+        color: #171624 !important;
+      }
+
+      /* ===== AJUSTE "XS" ≤ 375 px (centro inferior + esquinas rectas abajo) ===== */
+      @media (max-width:375px) {
+        .cc-window {
+          width: calc(100% - 24px);
+          /* 12 px de margen a cada lado */
+          left: 50% !important;
+          right: auto !important;
+          transform: translateX(-50%);
+          bottom: 0;
+          padding: 20px !important;
+          border-radius: 16px 16px 0 0 !important;
+          /* esquinas inferiores rectas */
+        }
+
+        .cc-window .cc-compliance {
+          flex-direction: column-reverse;
+          gap: 0.5rem;
+          align-items: stretch;
+        }
+
+        .cc-window .cc-btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div data-animation="default" data-collapse="medium" data-duration="300" data-easing="ease-in" data-easing2="ease-out" role="banner" class="nav-bar w-nav">
+      <div class="container-nav w-container"><a href="/es" aria-current="page" class="brand w-inline-block w--current"><img class="image-12" src="images/6850648b2a5bd2bfd17be7ea_Brand.svg" data-figma-image-id="6841f28f2fec422777879fc1" alt="" data-figma-id="410:151801" data-figma-image-hash="f00bd5956af7edb16e6caa8e95f8eacc" loading="eager"></a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <div class="menu-items"><a href="/es/contacto" class="menu">Contáctanos</a><a href="https://api-finity-docs.readme.io/docs/overview" target="_blank" class="menu">Documentación</a>
+            <div data-w-id="085576a9-3f74-51ba-4cd8-0f8c511ab18a" class="locales-wrapper w-locales-list">
+              <div data-hover="false" data-delay="200" class="dropdown-locale-cont w-dropdown">
+                <div class="dropdown-locale w-dropdown-toggle">
+                  <div class="menu-idioma"><img src="images/686be1580f56c4a8c629fb2f_CO.svg" loading="lazy" alt="" class="icon-menu">
+                    <div>Español</div>
+                    <div class="icon-dd-idioma w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <nav class="dropdown-list w-dropdown-list">
+                  <div role="list" class="lista-locales w-locales-items">
+                    <div role="listitem" class="locale w-locales-item"><img src="images/686be1580f56c4a8c629fb2f_CO.svg" loading="lazy" alt="" class="icon-idioma"><a hreflang="es" href="/es" aria-current="page" class="menu w--current">Español</a></div>
+                    <div role="listitem" class="locale w-locales-item"><img src="images/686be166ea4a67ee95f1b942_US.svg" loading="lazy" alt="" class="icon-idioma"><a hreflang="en" href="/en-us" class="menu">English</a></div>
+                  </div>
+                </nav>
+              </div>
+            </div><a data-w-id="f99d8d84-9cf9-15ae-37e7-667d5f08a51d" href="https://portal.finity.com.co/signin" target="_blank" class="button_nav-bar w-inline-block">
+              <div class="button-elements">
+                <p class="title-button">Login</p>
+                <div class="icon-container-menu">
+                  <div class="icon-button"><img src="images/684703233711cfb7758d2ded_Icon-Container.svg" loading="lazy" alt="" class="icon-image-button default"><img src="images/684984cecadfc5dc37d3e55e_Arrow-white.svg" loading="lazy" alt="" class="icon-image-button hover"></div>
+                </div>
+              </div>
+              <div class="button-gradient-color"></div>
+            </a>
+          </div>
+        </nav>
+        <div class="menu-button w-nav-button">
+          <div class="hamburger w-icon-nav-menu"></div>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-header">
+      <section id="Header" class="header">
+        <div class="header-info">
+          <div class="w-layout-blockcontainer container w-container">
+            <div class="header-content">
+              <div class="header-title">
+                <div class="header-texts">
+                  <h1 class="text-white">Un portal.<br>Toda tu operación global</h1>
+                  <p class="text-white">Abre cuentas virtuales en USD y EUR . Recibe pagos internacionales, convierte divisas, transfiere fondos y gestiona tarjetas corporativas. Todo en un mismo portal y API.</p>
+                </div>
+                <div class="header-buttons"><a data-figma-id="403:20931" data-w-id="7c5dc930-9bec-7f97-4de1-b161474c2e48" href="/es/contacto" class="button-medium-gradient w-inline-block">
+                    <p data-figma-id="I403:20931;48:21239" class="title-button-medium">Habla con nuestro equipo</p>
+                    <div class="icons-container">
+                      <div data-figma-id="I403:20931;246:99638" class="icon-container-button-medium"><img src="images/6847057060b7d4f40d65815f_Arrow-dark.svg" loading="lazy" alt="" class="icon-button-gr"><img src="images/684984cecadfc5dc37d3e55e_Arrow-white.svg" loading="lazy" width="18" height="18" alt="" class="icon-button-w"></div>
+                    </div>
+                    <div class="button-gr-osc"></div>
+                  </a><a data-w-id="f307a746-899c-794c-68b5-fd1e18c8f858" href="/es/contacto" class="button-stroke w-inline-block">
+                    <p data-w-id="357e0fd8-48e4-d2f4-7829-10bac48f2c19" class="text-white button-medium">Agendar demo</p>
+                  </a></div>
+              </div>
+              <div class="element-container">
+                <div id="json-header" class="global-header-mobile" data-w-id="17b71e59-d312-1d85-c2ea-7414010ad4f7" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68519a07c5ca2f09526a89de_195c5edb308ed62baeae87a640fe9251_Header-MOBILE.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="3.503503360802889"></div>
+                <div id="json-header" class="global-header desktop" data-w-id="f845dce1-505a-497c-58af-fabbf76bcd7b" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/684843b18c04ea886b07d06c_a68f2e77518d3d7a3e9cc122679d8910_Planeta-header-02.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="4.971638102472671"></div>
+                <div id="json-header" class="dispositivo-header desktop" data-w-id="fb19c3b1-7665-86b3-5197-beeed57b0905" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68519a0551eb77b50fda4ee7_2e3494f3b77b9af9133a334b30bf6854_Dispositivo-header-03.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="overflow-gradientes-container">
+      <section data-figma-id="403:20596" class="nuestras-soluciones-section">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="frame-texto-ns">
+            <div data-figma-id="403:20925" class="title-ns">
+              <div data-figma-id="403:20926" class="textos-ns">
+                <p data-figma-id="403:20928" class="subheading-gradient">NUESTRAS SOLUCIONES</p>
+                <h3 data-figma-id="403:20929" class="text-white center">Más control. Menos fricción. Todo en tiempo real</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="items-soluciones">
+        <div class="home-scroll_section">
+          <div class="home-scroll_content">
+            <div class="home-scroll_text-wrap w-dyn-list">
+              <div role="list" class="home-scroll_text-list w-dyn-items">
+                <div role="listitem" class="home-scroll_text-item w-dyn-item">
+                  <div class="container-soluciones_text">
+                    <div class="step-container">
+                      <div id="Step01" class="step"></div>
+                      <div id="Step02" class="step is-active"></div>
+                      <div id="Step03" class="step"></div>
+                      <div id="Step04" class="step"></div>
+                      <div id="Step05" class="step"></div>
+                      <div id="Step06" class="step"></div>
+                    </div>
+                    <div class="tex-scroll-container">
+                      <p class="heading-h3-2">Cuentas multi-moneda integradas</p>
+                      <p class="paragraph-4">Recibe dinero en USD, EUR y COP con cuentas a tu nombre.</p>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_text-item w-dyn-item">
+                  <div class="container-soluciones_text">
+                    <div class="step-container">
+                      <div id="Step01" class="step"></div>
+                      <div id="Step02" class="step is-active"></div>
+                      <div id="Step03" class="step"></div>
+                      <div id="Step04" class="step"></div>
+                      <div id="Step05" class="step"></div>
+                      <div id="Step06" class="step"></div>
+                    </div>
+                    <div class="tex-scroll-container">
+                      <p class="heading-h3-2">Pagos internacionales sin fricción</p>
+                      <p class="paragraph-4">Transfiere fondos globales con trazabilidad y sin tiempos muertos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_text-item w-dyn-item">
+                  <div class="container-soluciones_text">
+                    <div class="step-container">
+                      <div id="Step01" class="step"></div>
+                      <div id="Step02" class="step is-active"></div>
+                      <div id="Step03" class="step"></div>
+                      <div id="Step04" class="step"></div>
+                      <div id="Step05" class="step"></div>
+                      <div id="Step06" class="step"></div>
+                    </div>
+                    <div class="tex-scroll-container">
+                      <p class="heading-h3-2">Conversión de divisas instantánea</p>
+                      <p class="paragraph-4">Cambia entre monedas 24/7 y en segundos, al mejor tipo de cambio.</p>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_text-item w-dyn-item">
+                  <div class="container-soluciones_text">
+                    <div class="step-container">
+                      <div id="Step01" class="step"></div>
+                      <div id="Step02" class="step is-active"></div>
+                      <div id="Step03" class="step"></div>
+                      <div id="Step04" class="step"></div>
+                      <div id="Step05" class="step"></div>
+                      <div id="Step06" class="step"></div>
+                    </div>
+                    <div class="tex-scroll-container">
+                      <p class="heading-h3-2">Tarjetas Visa para tu equipo</p>
+                      <p class="paragraph-4">Gasta desde tus saldos en más de 200M de comercios.</p>
+                    </div>
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_text-item w-dyn-item">
+                  <div class="container-soluciones_text">
+                    <div class="step-container">
+                      <div id="Step01" class="step"></div>
+                      <div id="Step02" class="step is-active"></div>
+                      <div id="Step03" class="step"></div>
+                      <div id="Step04" class="step"></div>
+                      <div id="Step05" class="step"></div>
+                      <div id="Step06" class="step"></div>
+                    </div>
+                    <div class="tex-scroll-container">
+                      <p class="heading-h3-2">Panel central de control</p>
+                      <p class="paragraph-4">Visualiza saldos, movimientos y concilia desde un solo dashboard.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-scroll_visual">
+            <div class="home-scroll_img-wrap w-dyn-list">
+              <div role="list" class="home-scroll_img-list w-dyn-items">
+                <div role="listitem" class="home-scroll_img-item w-dyn-item">
+                  <div class="json-container">
+                    <div id="multi-moneda" class="code-embed-soluciones code-desktop w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/6849e5b932a981aef7dff98d_8d9533c8eeb4192b097b9a95176f721e_Cuentas%20multimoneda%2003.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_img-item w-dyn-item">
+                  <div class="json-container">
+                    <div id="pagos-internacionales" class="code-embed-soluciones code-desktop w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/6849e5b944b39c17689a1d7c_8973dd144ef36e0defe81396c4db6968_Pagos%20internacionales-02.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_img-item w-dyn-item">
+                  <div class="json-container">
+                    <div id="divisas-instantanea" class="code-embed-soluciones code-desktop w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68497f74e84a3ca4f5147ef7_96842374f0fd21e6a127b9a99d2cfc4f_Conversor%20de%20divisas.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_img-item w-dyn-item">
+                  <div class="json-container">
+                    <div id="tarjetas-visa" class="code-embed-soluciones code-desktop w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68497f746019b3de4e302fa2_58a5414f1b12ce2eb7c25b982a8bd788_Tarjeta%20Finity.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+                <div role="listitem" class="home-scroll_img-item w-dyn-item">
+                  <div class="json-container">
+                    <div id="panel-central" class="code-embed-soluciones code-desktop w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68519b14cc3d304549fd6841_7f3b109cf4c52bb37cce664cc3136782_Panel-de-control-central-Desktop.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="soluciones-mobile">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="w-dyn-list">
+            <div role="list" class="collection-list w-dyn-items">
+              <div role="listitem" class="w-dyn-item">
+                <div data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6" class="soluciones-mobile-content">
+                  <div class="solucion-info">
+                    <h3 class="text-white">Cuentas multi-moneda integradas</h3>
+                    <p class="text-white">Recibe dinero en USD, EUR y COP con cuentas a tu nombre.</p>
+                  </div>
+                  <div class="solucion-image-container">
+                    <div class="code-images-mobile w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/6849e5b932a981aef7dff98d_8d9533c8eeb4192b097b9a95176f721e_Cuentas%20multimoneda%2003.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <div data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6" class="soluciones-mobile-content">
+                  <div class="solucion-info">
+                    <h3 class="text-white">Pagos internacionales sin fricción</h3>
+                    <p class="text-white">Transfiere fondos globales con trazabilidad y sin tiempos muertos.</p>
+                  </div>
+                  <div class="solucion-image-container">
+                    <div class="code-images-mobile w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68509a596f7d32430bcff6e0_Pagos%20internacionales%20Mobile.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <div data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6" class="soluciones-mobile-content">
+                  <div class="solucion-info">
+                    <h3 class="text-white">Conversión de divisas instantánea</h3>
+                    <p class="text-white">Cambia entre monedas 24/7 y en segundos, al mejor tipo de cambio.</p>
+                  </div>
+                  <div class="solucion-image-container">
+                    <div class="code-images-mobile w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/6850504ed5188bdff5f23149_Conversion%20de%20divisas%20Mobile.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <div data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6" class="soluciones-mobile-content">
+                  <div class="solucion-info">
+                    <h3 class="text-white">Tarjetas Visa para tu equipo</h3>
+                    <p class="text-white">Gasta desde tus saldos en más de 200M de comercios.</p>
+                  </div>
+                  <div class="solucion-image-container">
+                    <div class="code-images-mobile w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/6850504e606e5309c104572f_Tarjeta%20Finity%20Mobile.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+              <div role="listitem" class="w-dyn-item">
+                <div data-w-id="2f6729cf-584d-19e0-bd1c-99c3b95e06a6" class="soluciones-mobile-content">
+                  <div class="solucion-info">
+                    <h3 class="text-white">Panel central de control</h3>
+                    <p class="text-white">Visualiza saldos, movimientos y concilia desde un solo dashboard.</p>
+                  </div>
+                  <div class="solucion-image-container">
+                    <div class="code-images-mobile w-embed w-script">
+                      <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                      <dotlottie-player src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68519b14cc3d304549fd6841_7f3b109cf4c52bb37cce664cc3136782_Panel-de-control-central-Desktop.json" speed="1" direction="1" mode="normal" loop="" autoplay="">
+                      </dotlottie-player>
+                    </div><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="charts-mobile w-condition-invisible w-dyn-bind-empty">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="overlfow-uso">
+      <section data-figma-id="403:33649" data-w-id="b0296ba4-1fca-ee5b-02d0-b3987a825d75" class="uso hide-mob">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="uso-content">
+            <div data-figma-id="403:33650" class="quienes">
+              <div data-figma-id="403:33651" class="titles">
+                <p data-figma-id="403:33652" class="subheading-gradient">Quiénes usan Finity</p>
+                <h3 data-figma-id="403:33655" class="text-white center">Empresas que mueven dinero entre países,
+                  ahora lo hacen mejor.</h3>
+              </div>
+              <div class="cards-container">
+                <div class="cards-horizontal-01">
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6841acd40c36ad984c2fa5cd_b0c2ab1c158d838112bf0d403343c287_vuesaxbulkfintech.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Fintechs</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6841acd40c36ad984c2fa5cd_b0c2ab1c158d838112bf0d403343c287_vuesaxbulkfintech.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Fintechs</p>
+                  </div>
+                  <div class="card"><img class="image-2" src="images/6843529fa1e4f9f54b16ca98_global-nomina.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">BPOs y nómina internacional</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img loading="lazy" src="images/6843529ff8cf2f4e4012c0c9_airplane-square.svg" alt="" class="image-2">
+                    <p data-figma-id="403:34124" class="titulo-card">Agencias de viaje</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img loading="lazy" src="images/6841acd40c36ad984c2fa5cd_b0c2ab1c158d838112bf0d403343c287_vuesaxbulkfintech.svg" alt="" class="image-2">
+                    <p data-figma-id="403:34124" class="titulo-card">Fintechs</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529fa1e4f9f54b16ca98_global-nomina.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">BPOs y nómina internacional</p>
+                  </div>
+                </div>
+                <div class="cards-horizontal-02">
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f6028c88aa4a8cf56_routing.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Importadores / exportadores</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f778d9e71b8deb370_monitor-mobbile.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Plataformas digitales</p>
+                  </div>
+                  <div class="card"><img class="image-2" src="images/6843529f9198e14d94074ae1_card-coin.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Empresas que venden o cobran en otros países</p>
+                  </div>
+                  <div class="card"><img class="image-2" src="images/6843529f6028c88aa4a8cf56_routing.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Importadores / exportadores</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f778d9e71b8deb370_monitor-mobbile.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Plataformas digitales</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f9198e14d94074ae1_card-coin.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Empresas que venden o cobran en otros países</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-figma-id="403:33659" data-w-id="fa3fa05d-cafb-6123-75c7-0697c5c8da37" class="api">
+              <div data-figma-id="403:33660" class="api-content">
+                <div data-figma-id="403:33661" class="api-texts">
+                  <div data-figma-id="403:33662" class="api-titles">
+                    <div data-figma-id="403:33663" class="titles-api">
+                      <p class="subheading-gradient">Integración API</p>
+                      <h3 data-figma-id="403:33665" class="text-white center">Así se ve operar finanzas
+                        internacionales con Finity.</h3>
+                    </div>
+                    <p data-figma-id="403:33666" class="text-white center">Conecta Finity a tu sistema y automatiza cobros, pagos y tesorería global.</p>
+                  </div><a data-figma-id="403:20931" data-w-id="7c5dc930-9bec-7f97-4de1-b161474c2e48" href="https://api-finity-docs.readme.io/docs/overview" class="button-medium-gradient w-inline-block">
+                    <p data-figma-id="I403:20931;48:21239" class="title-button-medium">Descarga la documentación</p>
+                    <div class="icons-container">
+                      <div data-figma-id="I403:20931;246:99638" class="icon-container-button-medium"><img src="images/6847057060b7d4f40d65815f_Arrow-dark.svg" loading="lazy" alt="" class="icon-button-gr"><img src="images/684984cecadfc5dc37d3e55e_Arrow-white.svg" loading="lazy" width="18" height="18" alt="" class="icon-button-w"></div>
+                    </div>
+                    <div class="button-gr-osc"></div>
+                  </a>
+                </div>
+                <div data-figma-id="403:33668" class="api-frames"><img src="images/685199709175e0451a9ccbcc_009e17d11cee9d0e396715531f34cf97_API-Home.avif" loading="lazy" width="Auto" alt="" class="portal-api">
+                  <div id="api-json" class="lottie-api" data-w-id="6933ffcc-5a1d-411e-c13d-f6ea2b3efa9b" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68508f9343eb69ed271abf22_API%20Mobile.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="6.473139542816766"></div>
+                </div>
+              </div>
+              <div data-figma-id="403:33670" class="cards-api">
+                <div data-figma-id="403:33671" data-w-id="04b87e2e-285c-7fbf-6c04-ed6ce1a672ac" style="opacity:0" class="grid-api">
+                  <div data-figma-id="403:33672" class="card-api"><img class="image-3" src="images/6841b025b9c4abbf73d106be_cloud-change.svg" data-figma-image-id="6841ace2691d86a243f22a02" alt="" data-figma-id="152:45073" data-figma-image-hash="599acef71f4d296440040bcdc4b47efa" loading="lazy">
+                    <div data-figma-id="403:33674" class="text-wrapper">
+                      <p data-figma-id="403:33675" class="heading-h3">API global unificada</p>
+                      <p data-figma-id="403:33676" class="text-white">Gestiona todos tus pagos internacionales con una sola integración.</p>
+                    </div>
+                  </div>
+                  <div data-figma-id="403:33677" class="card-api"><img class="image-4" src="images/6841b0250104ae5adbfdeab2_receipt-discount.svg" data-figma-image-id="6841ace2f3e4e98f6c353b85" alt="" data-figma-id="152:51992" data-figma-image-hash="6c22a6c25c22f07dc0f1746cd713e49a" loading="lazy">
+                    <div data-figma-id="403:33679" class="text-wrapper">
+                      <p data-figma-id="403:33680" class="heading-h3">Ahorro de hasta 73 %</p>
+                      <p data-figma-id="403:33681" class="text-white">Reduce tus costos de transacciones internacionales frente al estándar del mercado.</p>
+                    </div>
+                  </div>
+                  <div data-figma-id="403:33682" class="card-api"><img class="image-5" src="images/6841b0250516a97c561b047c_convert-card.svg" data-figma-image-id="6841ace3691d86a243f22a80" alt="" data-figma-id="152:52205" data-figma-image-hash="b20f8ae75bfe4992ed8662e31124f8fa" loading="lazy">
+                    <div data-figma-id="403:33684" class="text-wrapper">
+                      <p data-figma-id="403:33685" class="heading-h3">Liquidación 24/7</p>
+                      <p data-figma-id="403:33686" class="text-white">Convierte divisas en cualquier momento y recibe tus fondos el mismo día.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-figma-id="403:33649" class="uso-mobile">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="uso-content">
+            <div data-figma-id="403:33650" class="quienes">
+              <div data-figma-id="403:33651" class="titles">
+                <p data-figma-id="403:33652" class="subheading-gradient">Quiénes usan Finity</p>
+                <h3 data-figma-id="403:33655" class="text-white center">Empresas que mueven dinero entre países,
+                  ahora lo hacen mejor.</h3>
+              </div>
+              <div class="cards-container">
+                <div class="cards-horizontal-01">
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6841acd40c36ad984c2fa5cd_b0c2ab1c158d838112bf0d403343c287_vuesaxbulkfintech.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Fintechs</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529fa1e4f9f54b16ca98_global-nomina.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">BPOs y nómina internacional</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529ff8cf2f4e4012c0c9_airplane-square.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Agencias de viaje</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f6028c88aa4a8cf56_routing.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Importadores / exportadores</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f778d9e71b8deb370_monitor-mobbile.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Plataformas digitales</p>
+                  </div>
+                  <div data-figma-id="403:34122" class="card"><img class="image-2" src="images/6843529f9198e14d94074ae1_card-coin.svg" data-figma-image-id="6841acd40c36ad984c2fa5cd" alt="" data-figma-id="202:75698" data-figma-image-hash="5670f756ef0b044a180807e33505a1b3" loading="lazy">
+                    <p data-figma-id="403:34124" class="titulo-card">Empresas que venden o cobran en otros países</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-figma-id="403:33659" data-w-id="93102ba6-ce5b-9b83-e5a2-7605d63a3b7f" class="api">
+              <div data-figma-id="403:33660" class="api-content">
+                <div data-figma-id="403:33661" class="api-texts">
+                  <div data-figma-id="403:33662" class="api-titles">
+                    <div data-figma-id="403:33663" class="titles-api">
+                      <p class="subheading-gradient">Integración API</p>
+                      <h3 data-figma-id="403:33665" class="text-white center">Así se ve operar finanzas
+                        internacionales con Finity.</h3>
+                    </div>
+                    <p data-figma-id="403:33666" class="paragraph-2">Conecta Finity a tu sistema y automatiza cobros, pagos y tesorería global.</p>
+                  </div><a data-figma-id="403:20931" data-w-id="7c5dc930-9bec-7f97-4de1-b161474c2e48" href="#" class="button-medium-gradient w-inline-block">
+                    <p data-figma-id="I403:20931;48:21239" class="title-button-medium">Descarga la documentación</p>
+                    <div class="icons-container">
+                      <div data-figma-id="I403:20931;246:99638" class="icon-container-button-medium"><img src="images/6847057060b7d4f40d65815f_Arrow-dark.svg" loading="lazy" alt="" class="icon-button-gr"><img src="images/684984cecadfc5dc37d3e55e_Arrow-white.svg" loading="lazy" width="18" height="18" alt="" class="icon-button-w"></div>
+                    </div>
+                    <div class="button-gr-osc"></div>
+                  </a>
+                </div>
+                <div data-figma-id="403:33668" class="api-frames"><img src="images/685199709175e0451a9ccbcc_009e17d11cee9d0e396715531f34cf97_API-Home.avif" loading="lazy" width="Auto" alt="" class="portal-api">
+                  <div class="lottie-api" data-w-id="93102ba6-ce5b-9b83-e5a2-7605d63a3b8f" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44/68508f9343eb69ed271abf22_API%20Mobile.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="6.473139542816766"></div>
+                </div>
+              </div>
+              <div data-figma-id="403:33670" class="cards-api">
+                <div data-figma-id="403:33671" data-w-id="93102ba6-ce5b-9b83-e5a2-7605d63a3b91" style="opacity:0" class="grid-api">
+                  <div data-figma-id="403:33672" class="card-api"><img class="image-3" src="images/6841b025b9c4abbf73d106be_cloud-change.svg" data-figma-image-id="6841ace2691d86a243f22a02" alt="" data-figma-id="152:45073" data-figma-image-hash="599acef71f4d296440040bcdc4b47efa" loading="lazy">
+                    <div data-figma-id="403:33674" class="text-wrapper">
+                      <p data-figma-id="403:33675" class="heading-h3">API global unificada</p>
+                      <p data-figma-id="403:33676" class="paragraph-3">Gestiona todos tus pagos internacionales con una sola integración.</p>
+                    </div>
+                  </div>
+                  <div data-figma-id="403:33677" class="card-api"><img class="image-4" src="images/6841b0250104ae5adbfdeab2_receipt-discount.svg" data-figma-image-id="6841ace2f3e4e98f6c353b85" alt="" data-figma-id="152:51992" data-figma-image-hash="6c22a6c25c22f07dc0f1746cd713e49a" loading="lazy">
+                    <div data-figma-id="403:33679" class="text-wrapper">
+                      <p data-figma-id="403:33680" class="heading-h3">Ahorro de hasta 73 %</p>
+                      <p data-figma-id="403:33681" class="paragraph-3">Reduce tus costos de transacciones internacionales frente al estándar del mercado.</p>
+                    </div>
+                  </div>
+                  <div data-figma-id="403:33682" class="card-api"><img class="image-5" src="images/6841b0250516a97c561b047c_convert-card.svg" data-figma-image-id="6841ace3691d86a243f22a80" alt="" data-figma-id="152:52205" data-figma-image-hash="b20f8ae75bfe4992ed8662e31124f8fa" loading="lazy">
+                    <div data-figma-id="403:33684" class="text-wrapper">
+                      <p data-figma-id="403:33685" class="heading-h3">Liquidación 24/7</p>
+                      <p data-figma-id="403:33686" class="paragraph-3">Convierte divisas en cualquier momento y recibe tus fondos el mismo día.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer data-w-id="4eb30422-f849-a08a-35ad-14ab845bbc16" class="footer">
+        <div class="w-layout-blockcontainer container w-container">
+          <div data-figma-id="403:41426" class="footer-container">
+            <div data-figma-id="403:41439" class="footer-inner">
+              <div class="grid">
+                <div data-figma-id="403:41434" class="title-footer">
+                  <p data-figma-id="403:41435" class="subheading-gradient">CONTÁCTANOS</p>
+                  <h1 data-figma-id="403:41436" class="heading-h1">Habla con nuestro equipo de clase mundial</h1>
+                </div><a data-figma-id="403:20931" data-w-id="7c5dc930-9bec-7f97-4de1-b161474c2e48" href="/es/contacto" class="button-medium-gradient w-inline-block">
+                  <p data-figma-id="I403:20931;48:21239" class="title-button-medium">Agenda una llamada</p>
+                  <div class="icons-container">
+                    <div data-figma-id="I403:20931;246:99638" class="icon-container-button-medium"><img src="images/6847057060b7d4f40d65815f_Arrow-dark.svg" loading="lazy" alt="" class="icon-button-gr"><img src="images/684984cecadfc5dc37d3e55e_Arrow-white.svg" loading="lazy" width="18" height="18" alt="" class="icon-button-w"></div>
+                  </div>
+                  <div class="button-gr-osc"></div>
+                </a>
+              </div>
+              <div class="finity-logo"><img class="logo" src="images/6841b8b8d1d790781811bcc0_Logo.svg" data-figma-image-id="6841b8b8d1d790781811bcc0" alt="" data-figma-id="403:41441" data-figma-image-hash="8edcdba0cc7499154ea3bc87207666ba" loading="eager"></div>
+              <div data-figma-id="403:41450" class="footer-content">
+                <div data-figma-id="403:41452" class="contact-info">
+                  <div data-figma-id="403:41453" class="footer-bar-1">
+                    <div data-figma-id="403:41454" class="contacto">
+                      <p data-figma-id="403:41455" class="paragraph-bold text-white">Contáctanos</p><a href="mailto:soporte@finity.com" class="mail-link w-inline-block">
+                        <p data-figma-id="403:41456" class="soportefinitycom">sales@finity.com</p>
+                      </a>
+                    </div>
+                    <div data-figma-id="403:41457" class="sociales"><a href="https://www.linkedin.com/company/finityco/" target="_blank" class="media w-inline-block"><img class="linkedin" src="images/6841b8b97051fb7bd1c3eee3_Linkedin.svg" data-figma-image-id="6841b8b97051fb7bd1c3eee3" alt="" data-figma-id="403:41462" data-figma-image-hash="fde8755c9b101bb02491f11398ea3156" loading="lazy"></a></div>
+                  </div>
+                </div>
+                <div data-figma-id="403:41469" class="info">
+                  <div data-figma-id="403:41470" class="certificado">
+                    <p data-figma-id="403:41471" class="_2023-soluciones-de-pagos-y-recaudos-sas">© 2026 Soluciones de Pagos y Recaudos SAS.</p>
+                  </div>
+                  <div class="politicas">
+                    <div class="media-wrapper w-dyn-list">
+                      <div role="list" class="media-list w-dyn-items w-row">
+                        <div role="listitem" class="media-items w-dyn-item w-col w-col-6"><a href="/es/t-c/politica-de-tratamiento-de-datos-personales" class="t-c-link w-inline-block">
+                            <p class="terminos-y-condiciones">Política de tratamiento de datos personales</p>
+                          </a></div>
+                        <div role="listitem" class="media-items w-dyn-item w-col w-col-6"><a href="/es/t-c/terminos-y-condiciones-de-servicio" class="t-c-link w-inline-block">
+                            <p class="terminos-y-condiciones">Términos y condiciones</p>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cicle-container home"><img src="images/685098d69eec041670f433b5_Circles-02.avif" loading="eager" sizes="240px" srcset="images/685098d69eec041670f433b5_Circles-02-p-500.avif 500w, images/685098d69eec041670f433b5_Circles-02.avif 2353w" alt="" class="circles-gradient">
+          <div class="line_cirlce"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="gradients-site-content hide-mobile">
+      <div class="site-gradient"></div>
+      <div data-poster-url="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44%2F6855c0481cf081397cecc7ef_Fondo%20BG%20Finity%201-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/6840945247cd2c16f5379c44%2F6855c0481cf081397cecc7ef_Fondo%20BG%20Finity%201-transcode.mp4,https://cdn.prod.website-files.com/6840945247cd2c16f5379c44%2F6855c0481cf081397cecc7ef_Fondo%20BG%20Finity%201-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom"><video id="6cd0f626-f25b-7bdc-422b-0ac861852b5a-video" autoplay="" loop="" style="background-image:url(" https:="" cdn.prod.website-files.com="" 6840945247cd2c16f5379c44%2f6855c0481cf081397cecc7ef_fondo%20bg%20finity%201-poster-00001.jpg")"="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+          <source src="media/6840945247cd2c16f5379c44%252F6855c0481cf081397cecc7ef_Fondo%20BG%20Finity%201-transcode.mp4" data-wf-ignore="true">
+          <source src="media/6840945247cd2c16f5379c44%252F6855c0481cf081397cecc7ef_Fondo%20BG%20Finity%201-transcode.webm" data-wf-ignore="true">
+        </video></div>
+      <div class="code-embed w-embed"><canvas class="canvas-item" id="gradient-canvas"></canvas>
+
+        <style>
+          #gradient-canvas {
+            --gradient-color-1: #171624;
+            --gradient-color-2: #6CEAC7;
+            --gradient-color-3: #2CDBFF;
+            --gradient-color-4: #171624;
+          }
+
+          .canvas-item {
+            height: 100%;
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+            transform: translateZ(0);
+          }
+
+          /* Desktop: Sin opacidad, sin blur */
+          @media (min-width: 1271px) {
+            .canvas-item {
+              filter: none;
+              opacity: 1;
+            }
+          }
+
+          /* Mobile: Blur + opacidad */
+          @media (max-width: 1270px) {
+            .canvas-item {
+              filter: blur(15px) brightness(1.2) saturate(1.1);
+              opacity: 0.7;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .canvas-item {
+              filter: blur(25px) brightness(1.3) saturate(1.2);
+              opacity: 0.7;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .canvas-item {
+              filter: blur(35px) brightness(1.4) saturate(1.3);
+              opacity: 0.7;
+            }
+          }
+        </style>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.8208d3e53b97e3c7.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.f43c569cac9a8e08.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.9dfb96661114d3db.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/webflow.4a7f356d.6eb7b834440052f8.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script>
+      // Solución INSTANTÁNEA con sincronización perfecta
+      let sections = [];
+      let isScrolling = false;
+      let rafId = null;
+
+      function isMobile() {
+        return window.innerWidth <= 768;
+      }
+
+      // Función ultra-rápida para establecer activo
+      function setActive($triggers, $targets, idx) {
+        if (idx < 0 || idx >= $triggers.length) return;
+
+        $triggers.removeClass("is-active");
+        $targets.removeClass("is-active");
+        $triggers.find(".step").removeClass("is-active");
+
+        $triggers.eq(idx).addClass("is-active");
+        $targets.eq(idx).addClass("is-active");
+
+        const stepId = "#Step" + String(idx + 1).padStart(2, '0');
+        $triggers.eq(idx).find(stepId).addClass("is-active");
+      }
+
+      // Cálculo ultra-optimizado
+      function findClosestElement($triggers) {
+        const windowHeight = window.innerHeight;
+        const mobile = isMobile();
+
+        // Punto de activación
+        const activationLine = mobile ? windowHeight * 0.7 : windowHeight * 0.5;
+
+        let closestIdx = 0;
+        let minDistance = Infinity;
+
+        // Loop optimizado
+        for (let i = 0; i < $triggers.length; i++) {
+          const element = $triggers[i];
+          const rect = element.getBoundingClientRect();
+
+          // Skip elementos fuera de pantalla
+          if (rect.bottom < 0 || rect.top > windowHeight) continue;
+
+          // Cálculo directo del centro
+          const elementCenter = rect.top + (rect.height * 0.5);
+
+          // Distancia absoluta
+          const distance = Math.abs(activationLine - elementCenter);
+
+          // Actualiza si es más cercano
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIdx = i;
+          }
+        }
+
+        return closestIdx;
+      }
+
+      // Función de actualización INSTANTÁNEA
+      function updateSectionsInstant() {
+        const windowHeight = window.innerHeight;
+
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const {
+            $section,
+            $triggers,
+            $targets,
+            currentActiveIdx
+          } = section;
+
+          // Check rápido de visibilidad de sección
+          const sectionRect = $section[0].getBoundingClientRect();
+          if (sectionRect.bottom < -50 || sectionRect.top > windowHeight + 50) {
+            continue;
+          }
+
+          // Encuentra el más cercano
+          const newIdx = findClosestElement($triggers);
+
+          // Cambio instantáneo si es diferente
+          if (newIdx !== currentActiveIdx) {
+            setActive($triggers, $targets, newIdx);
+            section.currentActiveIdx = newIdx;
+          }
+        }
+      }
+
+      // Handler de scroll con RAF para timing perfecto
+      function onScrollStart() {
+        if (!isScrolling) {
+          isScrolling = true;
+          startScrollLoop();
+        }
+      }
+
+      // Loop de scroll continuo durante el scrolling
+      function startScrollLoop() {
+        function scrollLoop() {
+          updateSectionsInstant();
+
+          if (isScrolling) {
+            rafId = requestAnimationFrame(scrollLoop);
+          }
+        }
+
+        rafId = requestAnimationFrame(scrollLoop);
+      }
+
+      // Detiene el loop cuando para el scroll
+      function onScrollEnd() {
+        isScrolling = false;
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      }
+
+      // Inicialización ultra-rápida
+      function init() {
+        sections = [];
+
+        $(".home-scroll_section").each(function() {
+          const $section = $(this);
+          const $triggers = $section.find(".home-scroll_text-item");
+          const $targets = $section.find(".home-scroll_img-item");
+
+          if ($triggers.length === 0 || $targets.length === 0) return;
+
+          sections.push({
+            $section: $section,
+            $triggers: $triggers,
+            $targets: $targets,
+            currentActiveIdx: 0
+          });
+
+          setActive($triggers, $targets, 0);
+        });
+
+        // Actualización inicial instantánea
+        updateSectionsInstant();
+      }
+
+      // Setup de eventos optimizado
+      function setupEvents() {
+        // Limpia eventos anteriores
+        window.removeEventListener('scroll', onScrollStart);
+
+        let scrollTimeout;
+
+        // Evento de scroll que inicia el loop RAF
+        window.addEventListener('scroll', () => {
+          onScrollStart();
+
+          // Detecta cuando para el scroll
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            onScrollEnd();
+          }, 100); // Para el loop 100ms después de que para el scroll
+
+        }, {
+          passive: true
+        });
+      }
+
+      // Inicialización
+      function initialize() {
+        init();
+        setupEvents();
+      }
+
+      // Limpieza
+      function cleanup() {
+        window.removeEventListener('scroll', onScrollStart);
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+        isScrolling = false;
+        sections = [];
+      }
+
+      // Inicialización inmediata
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+      } else {
+        initialize();
+      }
+
+      window.addEventListener('load', () => {
+        setTimeout(initialize, 25);
+      });
+
+      // Resize optimizado
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initialize, 150);
+      });
+
+      // Orientación
+      window.addEventListener('orientationchange', () => {
+        setTimeout(initialize, 200);
+      });
+
+      window.addEventListener('beforeunload', cleanup);
+
+      // Debug instantáneo
+      window.debugInstant = function() {
+        console.log('=== DEBUG INSTANTÁNEO ===');
+        console.log('Secciones:', sections.length);
+        console.log('Scrolling activo:', isScrolling);
+        console.log('RAF ID:', rafId);
+
+        const windowHeight = window.innerHeight;
+        const activationLine = isMobile() ? windowHeight * 0.7 : windowHeight * 0.5;
+        console.log('Línea de activación:', activationLine + 'px');
+
+        sections.forEach((section, i) => {
+          console.log(`\nSección ${i} - Activo: ${section.currentActiveIdx}`);
+
+          section.$triggers.each(function(idx, el) {
+            const rect = el.getBoundingClientRect();
+            const center = rect.top + (rect.height / 2);
+            const distance = Math.abs(activationLine - center);
+
+            console.log(`  ${idx}: centro=${Math.round(center)}px, dist=${Math.round(distance)}px ${idx === section.currentActiveIdx ? '← ACTIVO' : ''}`);
+          });
+        });
+      };
+
+      // Auto-debug
+      setTimeout(() => {
+        if (typeof window.debugInstant === 'function') {
+          window.debugInstant();
+        }
+      }, 500);
+    </script>
+
+
+    <script src="js/webgl-gradient.js"></script>
+    <script>
+      var gradient = new Gradient()
+      gradient.initGradient('#gradient-canvas');
+    </script>
+  
+</body></html>

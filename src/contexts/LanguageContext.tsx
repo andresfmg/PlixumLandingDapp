@@ -10,196 +10,142 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    // Hero
-    heroTitle: 'Plixum: Non-Custodial DeFi for LATAM & US',
-    heroSubtitle: 'Advanced decentralized finance on Solana. True user ownership, multi-protocol yield, seamless onramp/offramp for LATAM, and US virtual accounts with debit cards. Experience secure, transparent, and borderless financial services.',
-    heroCtaPrimary: 'Download on iPhone',
-    heroCtaSecondary: 'Download on Android',
+    // Hero - Finity style
+    heroTitle: 'One portal. Your entire global operation.',
+    heroSubtitle: 'More control. Less friction. Everything in real-time.',
+    heroCopy: 'Open virtual accounts in USD and EUR. Receive international payments, convert currencies, transfer funds and manage corporate cards. All in one portal and API.',
+    heroCtaPrimary: 'Talk to our team',
+    heroCtaSecondary: 'Schedule demo',
 
-    // Features
-    featuresTitle: 'Why Plixum Stands Out',
-    feature1Title: 'Non-Custodial Architecture',
-    feature1Desc: 'You control your keys and funds—always. No centralized risk, no third-party custody.',
-    feature2Title: 'Multi-Protocol Integration',
-    feature2Desc: 'Access Jupiter Lend, MarginFi, Solend, Raydium, Orca, Kamino, Jito, and more from one dashboard.',
-    feature3Title: 'LATAM On/Off Ramp',
-    feature3Desc: 'Deposit and withdraw via PSE (Colombia), SPEI (Mexico), PIX (Brazil), CVU (Argentina).',
-    feature4Title: 'US Banking & Cards',
-    feature4Desc: 'Virtual USD accounts, ACH/Wire, and Visa debit cards via Bridge.xyz. Use your crypto globally.',
+    // Nuestras Soluciones / Our Solutions
+    featuresTitle: 'Our Solutions',
+    feature1Title: 'Multi-currency integrated accounts',
+    feature1Desc: 'Receive money in USD, EUR and COP with accounts in your name.',
+    feature2Title: 'International payments without friction',
+    feature2Desc: 'Transfer global funds with traceability and no downtime.',
+    feature3Title: 'Instant currency conversion',
+    feature3Desc: 'Change between currencies 24/7 and in seconds, at the best exchange rate.',
+    feature4Title: 'Visa cards for your team',
+    feature4Desc: 'Spend from your balances in more than 200M merchants.',
+    feature5Title: 'Central control panel',
+    feature5Desc: 'View balances, movements and reconcile from a single dashboard.',
+    
+    // Solutions Section Header
+    solutionsHeader: 'Our Solutions',
+    solutionsSubheader: 'More control. Less friction. Everything in real-time.',
 
-    // Markets
-    marketsTitle: 'Who Is Plixum For?',
-    market1Title: 'LATAM Individuals & Businesses',
-    market1Desc: 'Seamless access to DeFi, stablecoins, and US banking for users and companies in Latin America.',
-    market2Title: 'Freelancers & Remote Workers',
-    market2Desc: 'Receive payments in USD, convert to crypto, and spend globally with a Visa card.',
-    market3Title: 'Crypto-Native Users',
-    market3Desc: 'Maximize yield, diversify risk, and manage assets across top Solana protocols.',
-    market4Title: 'Remittance & Commerce',
-    market4Desc: 'Send, receive, and convert funds instantly with low fees and no borders.',
+    // Markets - Who uses
+    marketsTitle: 'Who uses Plixum',
+    market1Title: 'Fintechs',
+    market1Desc: 'Companies that move money between countries now do it better.',
+    market2Title: 'BPOs and international payroll',
+    market2Desc: 'Companies that move money between countries now do it better.',
+    market3Title: 'Travel agencies',
+    market3Desc: 'Companies that move money between countries now do it better.',
+    market4Title: 'Importers / exporters',
+    market4Desc: 'Companies that move money between countries now do it better.',
+    marketsSubheader: 'Companies that move money between countries now do it better.',
 
-    // Solutions
-    solutionsTitle: 'Plixum Core Solutions',
-    solution1Title: 'PDA Smart Contracts',
-    solution1Desc: 'Each user gets a unique, non-custodial smart contract on Solana for secure, automated DeFi.',
-    solution2Title: 'Unified DeFi Dashboard',
-    solution2Desc: 'Manage lending, swaps, yield, and more across integrated protocols in one place.',
-    solution3Title: 'Fiat On/Off Ramp',
-    solution3Desc: 'Move between crypto and local currency with regulated partners and instant settlement.',
+    // API Section
+    apiSectionTitle: 'API Integration',
+    apiSectionSubtitle: 'This is how international finance operates with Plixum.',
+    apiSectionCopy: 'Connect Plixum to your system and automate collections, payments and global treasury.',
+    solutionsTitle: 'API Integration',
+    solution1Title: 'Global unified API',
+    solution1Desc: 'Manage all your international payments with a single integration.',
+    solution2Title: 'Savings of up to 73%',
+    solution2Desc: 'Reduce your international transaction costs compared to market standard.',
+    solution3Title: '24/7 Settlement',
+    solution3Desc: 'Convert currencies anytime and receive your funds the same day.',
+    
+    // API Features Grid
+    apiFeature1Title: 'Secure payments',
+    apiFeature1Desc: 'Bank-grade security for all transactions.',
+    apiFeature2Title: 'Real-time tracking',
+    apiFeature2Desc: 'Monitor your transactions as they happen.',
+    apiFeature3Title: 'Multi-currency support',
+    apiFeature3Desc: 'Work with any currency worldwide.',
 
     // CTA
-    ctaTitle: 'Ready to Experience True DeFi?',
-    ctaSubtitle: 'Join Plixum and bridge the gap between traditional and decentralized finance. Secure, borderless, and built for you.',
-    ctaButton: 'Contact Plixum',
+    ctaTitle: 'Talk to our world-class team',
+    ctaSubtitle: 'Schedule a call',
+    ctaButton: 'Contact us',
+    ctaLabel: 'Contact us',
 
-    // Stats
-    stat1: 'No Custody Risk',
-    stat2: 'Multi-Protocol Access',
-    stat3: 'LATAM & US Banking',
-
-    // Business Accounts
-    businessTitle: 'Business & Personal Accounts',
-    businessSubtitle: 'All you need to manage digital assets, earn yield, and access global banking.',
-    business1Title: 'Multi-Currency & Stablecoins',
-    business1Desc: 'Accept and hold USDC, USDT, and more. Instant conversion and on-chain transparency.',
-    business2Title: 'Earn up to 6% APY',
-    business2Desc: 'Competitive yields on your deposits via top DeFi protocols. Withdraw anytime.',
-    business3Title: 'Mass Payouts & Remittances',
-    business3Desc: 'Send payments to suppliers, contractors, and employees worldwide with minimal fees.',
-    business4Title: 'API & Automation',
-    business4Desc: 'Integrate Plixum with your business systems for seamless operations.',
-    business5Title: 'Unified Analytics',
-    business5Desc: 'Track balances, yields, and transactions in real time across all services.',
-    business6Title: 'Priority Support',
-    business6Desc: 'Get expert help and compliance guidance for your business or personal needs.',
-
-    // How It Works
-    howItWorksTitle: 'How Plixum Works',
-    step1Title: 'Create Your Wallet',
-    step1Desc: 'Sign up and get a unique, non-custodial smart contract wallet on Solana.',
-    step2Title: 'Deposit or Onramp',
-    step2Desc: 'Fund your wallet with crypto or local currency via supported payment rails.',
-    step3Title: 'Access DeFi & Banking',
-    step3Desc: 'Lend, swap, earn yield, or open a US virtual account and get a Visa card.',
-    step4Title: 'Withdraw or Spend',
-    step4Desc: 'Move funds to your bank, spend with your card, or deploy to DeFi—all in one place.',
-
-    // Use Cases
-    useCasesTitle: 'Real-World Use Cases',
-    useCase1Title: 'LATAM E-commerce',
-    useCase1Desc: 'Accept crypto and stablecoin payments, settle in local currency, and access global markets.',
-    useCase2Title: 'Freelance & Remote Work',
-    useCase2Desc: 'Get paid in USD, convert to crypto, and spend instantly with a Visa card.',
-    useCase3Title: 'Yield Generation',
-    useCase3Desc: 'Put your assets to work with automated, multi-protocol DeFi strategies.',
-    useCase4Title: 'Remittances',
-    useCase4Desc: 'Send money across borders instantly and affordably, with no banks or intermediaries.',
-
-    // Yields
-    yieldsTitle: 'Earn Competitive Yields',
-    yieldsSubtitle: 'Your deposits, your yield—no lockups, no custody.',
-    yieldsDesc: 'Generate up to 6% APY on stablecoins via secure, audited DeFi protocols. Withdraw anytime.',
-    yieldsApy: 'Up to 6% APY',
-    yieldsFeature1: 'No minimum deposit',
-    yieldsFeature2: 'Daily compounding',
-    yieldsFeature3: 'Withdraw anytime',
-    yieldsFeature4: 'Audited protocols',
+    // Additional
+    downloadDocs: 'Download documentation',
+    headerContact: 'Contact us',
+    headerDocs: 'Documentation',
+    headerLogin: 'Login',
   },
   es: {
-    // Hero
-    heroTitle: 'Plixum: DeFi No Custodiado para LATAM y USA',
-    heroSubtitle: 'Finanzas descentralizadas avanzadas sobre Solana. Propiedad real del usuario, rendimiento multi-protocolo, onramp/offramp para LATAM y cuentas virtuales en USA con tarjetas. Servicios financieros seguros, transparentes y sin fronteras.',
-    heroCtaPrimary: 'Descargar en iPhone',
-    heroCtaSecondary: 'Descargar en Android',
+    // Hero - Finity style
+    heroTitle: 'Un portal. Toda tu operación global.',
+    heroSubtitle: 'Más control. Menos fricción. Todo en tiempo real.',
+    heroCopy: 'Abre cuentas virtuales en USD y EUR. Recibe pagos internacionales, convierte divisas, transfiere fondos y gestiona tarjetas corporativas. Todo en un mismo portal y API.',
+    heroCtaPrimary: 'Habla con nuestro equipo',
+    heroCtaSecondary: 'Agendar demo',
 
-    // Features
-    featuresTitle: '¿Por qué Plixum es diferente?',
-    feature1Title: 'Arquitectura No Custodiada',
-    feature1Desc: 'Tú controlas tus llaves y fondos. Sin riesgo centralizado, sin custodia de terceros.',
-    feature2Title: 'Integración Multi-Protocolo',
-    feature2Desc: 'Accede a Jupiter Lend, MarginFi, Solend, Raydium, Orca, Kamino, Jito y más desde un solo panel.',
-    feature3Title: 'On/Off Ramp LATAM',
-    feature3Desc: 'Deposita y retira vía PSE (Colombia), SPEI (México), PIX (Brasil), CVU (Argentina).',
-    feature4Title: 'Banca y Tarjetas USA',
-    feature4Desc: 'Cuentas virtuales USD, ACH/Wire y tarjetas Visa vía Bridge.xyz. Usa tu cripto globalmente.',
+    // Nuestras Soluciones
+    featuresTitle: 'Nuestras Soluciones',
+    feature1Title: 'Cuentas multi-moneda integradas',
+    feature1Desc: 'Recibe dinero en USD, EUR y COP con cuentas a tu nombre.',
+    feature2Title: 'Pagos internacionales sin fricción',
+    feature2Desc: 'Transfiere fondos globales con trazabilidad y sin tiempos muertos.',
+    feature3Title: 'Conversión de divisas instantánea',
+    feature3Desc: 'Cambia entre monedas 24/7 y en segundos, al mejor tipo de cambio.',
+    feature4Title: 'Tarjetas Visa para tu equipo',
+    feature4Desc: 'Gasta desde tus saldos en más de 200M de comercios.',
+    feature5Title: 'Panel central de control',
+    feature5Desc: 'Visualiza saldos, movimientos y concilia desde un solo dashboard.',
 
-    // Markets
-    marketsTitle: '¿Para quién es Plixum?',
-    market1Title: 'Personas y Empresas LATAM',
-    market1Desc: 'Acceso sencillo a DeFi, stablecoins y banca USA para usuarios y compañías en Latinoamérica.',
-    market2Title: 'Freelancers y Remotos',
-    market2Desc: 'Recibe pagos en USD, convierte a cripto y gasta globalmente con tarjeta Visa.',
-    market3Title: 'Usuarios Cripto-Nativos',
-    market3Desc: 'Maximiza rendimiento, diversifica riesgo y gestiona activos en los mejores protocolos de Solana.',
-    market4Title: 'Remesas y Comercio',
-    market4Desc: 'Envía, recibe y convierte fondos al instante, con bajas comisiones y sin fronteras.',
+    // Sección Soluciones Header
+    solutionsHeader: 'Nuestras Soluciones',
+    solutionsSubheader: 'Más control. Menos fricción. Todo en tiempo real.',
 
-    // Solutions
-    solutionsTitle: 'Soluciones Core de Plixum',
-    solution1Title: 'Smart Contracts PDA',
-    solution1Desc: 'Cada usuario obtiene un smart contract único y no custodiado en Solana para DeFi seguro y automatizado.',
-    solution2Title: 'Dashboard DeFi Unificado',
-    solution2Desc: 'Gestiona préstamos, swaps, rendimiento y más en protocolos integrados desde un solo lugar.',
-    solution3Title: 'On/Off Ramp Fiat',
-    solution3Desc: 'Mueve fondos entre cripto y moneda local con partners regulados y liquidación instantánea.',
+    // Quiénes usan Plixum
+    marketsTitle: 'Quiénes usan Plixum',
+    market1Title: 'Fintechs',
+    market1Desc: 'Empresas que mueven dinero entre países, ahora lo hacen mejor.',
+    market2Title: 'BPOs y nómina internacional',
+    market2Desc: 'Empresas que mueven dinero entre países, ahora lo hacen mejor.',
+    market3Title: 'Agencias de viaje',
+    market3Desc: 'Empresas que mueven dinero entre países, ahora lo hacen mejor.',
+    market4Title: 'Importadores / exportadores',
+    market4Desc: 'Empresas que mueven dinero entre países, ahora lo hacen mejor.',
+    marketsSubheader: 'Empresas que mueven dinero entre países, ahora lo hacen mejor.',
+
+    // Sección API
+    apiSectionTitle: 'Integración API',
+    apiSectionSubtitle: 'Así se ve operar finanzas internacionales con Plixum.',
+    apiSectionCopy: 'Conecta Plixum a tu sistema y automatiza cobros, pagos y tesorería global.',
+    solutionsTitle: 'Integración API',
+    solution1Title: 'API global unificada',
+    solution1Desc: 'Gestiona todos tus pagos internacionales con una sola integración.',
+    solution2Title: 'Ahorro de hasta 73%',
+    solution2Desc: 'Reduce tus costos de transacciones internacionales frente al estándar del mercado.',
+    solution3Title: 'Liquidación 24/7',
+    solution3Desc: 'Convierte divisas en cualquier momento y recibe tus fondos el mismo día.',
+
+    // Características API Grid
+    apiFeature1Title: 'Pagos seguros',
+    apiFeature1Desc: 'Seguridad de nivel bancario para todas las transacciones.',
+    apiFeature2Title: 'Seguimiento en tiempo real',
+    apiFeature2Desc: 'Monitorea tus transacciones mientras suceden.',
+    apiFeature3Title: 'Soporte multi-moneda',
+    apiFeature3Desc: 'Trabaja con cualquier moneda en el mundo.',
 
     // CTA
-    ctaTitle: '¿Listo para vivir el verdadero DeFi?',
-    ctaSubtitle: 'Únete a Plixum y conecta el mundo financiero tradicional con el descentralizado. Seguro, sin fronteras y hecho para ti.',
-    ctaButton: 'Contactar a Plixum',
+    ctaTitle: 'Habla con nuestro equipo de clase mundial',
+    ctaSubtitle: 'Agenda una llamada',
+    ctaButton: 'Contáctanos',
+    ctaLabel: 'Contáctanos',
 
-    // Stats
-    stat1: 'Sin riesgo de custodia',
-    stat2: 'Acceso multi-protocolo',
-    stat3: 'Banca LATAM y USA',
-
-    // Business Accounts
-    businessTitle: 'Cuentas Personales y Empresariales',
-    businessSubtitle: 'Todo para gestionar activos digitales, ganar rendimiento y acceder a banca global.',
-    business1Title: 'Multi-moneda y Stablecoins',
-    business1Desc: 'Acepta y guarda USDC, USDT y más. Conversión instantánea y transparencia on-chain.',
-    business2Title: 'Gana hasta 6% APY',
-    business2Desc: 'Rendimientos competitivos en tus depósitos vía los mejores protocolos DeFi. Retira cuando quieras.',
-    business3Title: 'Pagos Masivos y Remesas',
-    business3Desc: 'Envía pagos a proveedores, contratistas y empleados globalmente con bajas comisiones.',
-    business4Title: 'API y Automatización',
-    business4Desc: 'Integra Plixum con tus sistemas para operaciones sin fricción.',
-    business5Title: 'Analítica Unificada',
-    business5Desc: 'Monitorea saldos, rendimientos y transacciones en tiempo real en todos los servicios.',
-    business6Title: 'Soporte Prioritario',
-    business6Desc: 'Recibe ayuda experta y guía de compliance para tu empresa o uso personal.',
-
-    // How It Works
-    howItWorksTitle: 'Cómo Funciona Plixum',
-    step1Title: 'Crea tu Wallet',
-    step1Desc: 'Regístrate y obtén un smart contract wallet único y no custodiado en Solana.',
-    step2Title: 'Deposita o Haz Onramp',
-    step2Desc: 'Fondea tu wallet con cripto o moneda local usando los métodos soportados.',
-    step3Title: 'Accede a DeFi y Banca',
-    step3Desc: 'Haz lending, swaps, gana rendimiento o abre cuenta virtual USA y obtén tarjeta Visa.',
-    step4Title: 'Retira o Gasta',
-    step4Desc: 'Mueve fondos a tu banco, gasta con tu tarjeta o usa en DeFi, todo desde un solo lugar.',
-
-    // Use Cases
-    useCasesTitle: 'Casos de Uso Reales',
-    useCase1Title: 'E-commerce LATAM',
-    useCase1Desc: 'Acepta pagos en cripto y stablecoins, liquida en moneda local y accede a mercados globales.',
-    useCase2Title: 'Freelance y Trabajo Remoto',
-    useCase2Desc: 'Recibe pagos en USD, convierte a cripto y gasta al instante con tarjeta Visa.',
-    useCase3Title: 'Generación de Rendimiento',
-    useCase3Desc: 'Pon tus activos a trabajar con estrategias DeFi automatizadas y multi-protocolo.',
-    useCase4Title: 'Remesas',
-    useCase4Desc: 'Envía dinero entre países al instante y a bajo costo, sin bancos ni intermediarios.',
-
-    // Yields
-    yieldsTitle: 'Gana Rendimientos Competitivos',
-    yieldsSubtitle: 'Tus depósitos, tu rendimiento—sin bloqueos ni custodia.',
-    yieldsDesc: 'Genera hasta 6% APY en stablecoins vía protocolos DeFi auditados y seguros. Retira cuando quieras.',
-    yieldsApy: 'Hasta 6% APY',
-    yieldsFeature1: 'Sin depósito mínimo',
-    yieldsFeature2: 'Capitalización diaria',
-    yieldsFeature3: 'Retira cuando quieras',
-    yieldsFeature4: 'Protocolos auditados',
+    // Additional
+    downloadDocs: 'Descarga la documentación',
+    headerContact: 'Contáctanos',
+    headerDocs: 'Documentación',
+    headerLogin: 'Acceso',
   },
 };
 
