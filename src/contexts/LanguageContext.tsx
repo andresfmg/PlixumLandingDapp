@@ -67,8 +67,9 @@ const translations = {
     apiFeature3Desc: 'Work with any currency worldwide.',
 
     // CTA
-    ctaTitle: 'Talk to our world-class team',
+    ctaTitle: "Let's talk about how to optimize your company payments",
     ctaSubtitle: 'Schedule a call',
+    ctaFormSubtitle: 'Complete the form and we will contact you in less than 24 business hours',
     ctaButton: 'Contact us',
     ctaLabel: 'Contact us',
 
@@ -136,8 +137,9 @@ const translations = {
     apiFeature3Desc: 'Trabaja con cualquier moneda en el mundo.',
 
     // CTA
-    ctaTitle: 'Habla con nuestro equipo de clase mundial',
-    ctaSubtitle: 'Agenda una llamada',
+    ctaTitle: 'Hablemos sobre cómo optimizar tus pagos en tu empresa',
+    ctaSubtitle: 'Agendar una llamada',
+    ctaFormSubtitle: 'Completa el formulario y te contactaremos en menos de 24 horas hábiles',
     ctaButton: 'Contáctanos',
     ctaLabel: 'Contáctanos',
 

@@ -52,11 +52,11 @@ export const Footer = () => {
                 Contáctanos
               </p>
               <a 
-                href="mailto:sales@plixum.com"
+                href="mailto:info@plixum.com"
                 className="text-white hover:text-cyan-400 transition no-underline"
                 style={{ fontSize: '18px', fontWeight: 400 }}
               >
-                sales@plixum.com
+                info@plixum.com
               </a>
             </div>
 

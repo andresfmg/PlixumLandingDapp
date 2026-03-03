@@ -31,8 +31,8 @@ export const Hero = () => {
             <div className="flex gap-4">
               {/* Gradient button */}
               <a 
-                href="#" 
-                className="bg-gradient-to-r from-cyan-400 to-green-400 rounded-full flex items-center justify-center no-underline"
+                href="#contact" 
+                className="bg-gradient-to-r from-cyan-400 to-green-400 rounded-full flex items-center justify-center no-underline hover:opacity-90 transition-opacity"
                 style={{ padding: '10px 24px' }}
               >
                 <span className="text-black font-semibold" style={{ fontSize: 'var(--button-medium)' }}>
@@ -42,8 +42,8 @@ export const Hero = () => {
 
               {/* Outline button */}
               <a 
-                href="#" 
-                className="border border-white rounded-full flex items-center justify-center no-underline"
+                href="#contact" 
+                className="border border-white rounded-full flex items-center justify-center no-underline hover:bg-white/10 transition-colors"
                 style={{ padding: '10px 24px' }}
               >
                 <span className="text-white font-semibold" style={{ fontSize: 'var(--button-medium)' }}>

@@ -22,7 +22,7 @@ export const Header = () => {
           <div className="hidden md:flex items-center gap-8">
             {/* Menu items */}
             <div className="flex items-center gap-8">
-              <a href="/contacto" className="text-white hover:text-cyan-400 transition no-underline" style={{ fontSize: '16px', fontWeight: 500 }}>
+              <a href="#contact" className="text-white hover:text-cyan-400 transition no-underline" style={{ fontSize: '16px', fontWeight: 500 }}>
                 {t('headerContact')}
               </a>
               <a href="#" target="_blank" className="text-white hover:text-cyan-400 transition no-underline" style={{ fontSize: '16px', fontWeight: 500 }}>

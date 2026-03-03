@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { RegistrationForm } from './RegistrationForm';
 
 export const CTA = () => {
   const { t } = useLanguage();
@@ -6,7 +7,7 @@ export const CTA = () => {
   return (
     <>
       {/* SECCIÓN: CONTÁCTANOS - Call to Action */}
-      <section className="relative w-full bg-black text-white overflow-hidden" style={{ paddingTop: 'var(--padding-section-y)', paddingBottom: 'var(--padding-section-y)' }}>
+      <section id="contact" className="relative w-full bg-black text-white overflow-hidden" style={{ paddingTop: 'var(--padding-section-y)', paddingBottom: 'var(--padding-section-y)' }}>
         {/* Background gradient circles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
@@ -23,7 +24,7 @@ export const CTA = () => {
         <div className="finity-container relative z-10">
           {/* Label */}
           <div className="flex flex-col items-center" style={{ gap: 'var(--gap-large)' }}>
-            <div className="flex flex-col items-center gap-6 w-full max-w-3xl mx-auto">
+            <div className="flex flex-col items-center gap-6 w-full max-w-4xl mx-auto">
               <p className="text-sm tracking-widest uppercase font-semibold bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent" style={{ fontSize: 'var(--subheading)', fontWeight: 600, letterSpacing: '0.2em' }}>
                 {t('ctaLabel')}
               </p>
@@ -32,18 +33,16 @@ export const CTA = () => {
               <h1 className="text-center text-white font-bold leading-tight" style={{ fontSize: 'var(--h1)', lineHeight: '130%' }}>
                 {t('ctaTitle')}
               </h1>
+              {/* Optional Subtitle */}
+              <h3 className="text-center text-gray-400 font-medium px-4" style={{ fontSize: 'var(--h3)', marginTop: 'var(--gap-small)' }}>
+                {t('ctaFormSubtitle')}
+              </h3>
             </div>
 
-            {/* Button */}
-            <a 
-              href="/contacto"
-              className="z-5 flex gap-2 bg-gradient-to-r from-cyan-400 to-green-400 rounded-full flex-none justify-center items-center no-underline hover:opacity-90 transition-opacity"
-              style={{ padding: '10px 24px' }}
-            >
-              <p className="text-black font-semibold" style={{ fontSize: 'var(--button-medium)', lineHeight: '112%' }}>
-                {t('ctaButton')}
-              </p>
-            </a>
+            {/* Registration Form */}
+            <div className="w-full max-w-5xl mx-auto mt-12">
+              <RegistrationForm />
+            </div>
           </div>
         </div>
       </section>
