@@ -52,6 +52,17 @@ export const Header = () => {
           <div className="md:hidden flex items-center gap-3">
             <ThemeSwitcher />
             <LanguageSwitcher />
+            
+            {/* Login button - gradient */}
+            <a 
+              href="https://app.plixum.com/" 
+              target="_blank" 
+              className="z-5 flex gap-2 bg-gradient-to-r from-cyan-400 to-green-400 rounded-full flex-none justify-center items-center px-4 py-2 no-underline relative overflow-hidden flex-shrink-0"
+            >
+              <p className="text-black font-semibold" style={{ fontSize: '14px', lineHeight: '1' }}>
+                {t('headerLogin')}
+              </p>
+            </a>
           </div>
         </div>
       </div>
