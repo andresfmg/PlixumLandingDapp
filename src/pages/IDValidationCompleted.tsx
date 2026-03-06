@@ -11,8 +11,8 @@ const IDValidationCompleted = () => {
               <path d="M8 12.5l3 3 5-5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h1 className="text-3xl font-bold text-foreground">ID validation completed</h1>
-          <p className="text-muted-foreground text-lg">Your identity has been successfully verified.</p>
+          <h1 className="text-3xl font-bold text-foreground">Validation completed</h1>
+          <p className="text-muted-foreground text-lg">Process has been successfully verified. Close this message to continue.</p>
         </div>
       </div>
     </section>
