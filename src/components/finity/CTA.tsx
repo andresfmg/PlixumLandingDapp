@@ -65,11 +65,11 @@ export const CTA = () => {
                 Contáctanos
               </p>
               <a 
-                href="mailto:sales@plixum.com"
+                href="mailto:info@plixum.com"
                 className="text-cyan-400 hover:text-cyan-300 no-underline transition-colors"
                 style={{ fontSize: 'var(--paragraph)', fontWeight: 400 }}
               >
-                sales@plixum.com
+                Email Us
               </a>
             </div>
 
