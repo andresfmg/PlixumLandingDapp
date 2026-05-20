@@ -6,11 +6,13 @@ export const Footer = () => {
   const { language } = useLanguage();
   const links = {
     en: [
+      { href: '/faq', label: 'FAQ' },
       { href: '/terms-of-service', label: 'Terms and Conditions' },
       { href: '/privacy', label: 'Privacy Policy' },
       { href: '/policy-sagrilaft', label: 'SAGRILAFT Policy' },
     ],
     es: [
+      { href: '/faq', label: 'Preguntas Frecuentes' },
       { href: '/terms-of-service', label: 'Términos y condiciones de servicio' },
       { href: '/privacy', label: 'Política de tratamiento de datos personales' },
       { href: '/policy-sagrilaft', label: 'Política SAGRILAFT' },

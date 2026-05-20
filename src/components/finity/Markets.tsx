@@ -10,8 +10,8 @@ export const Markets = () => {
     { title: t('market2Title'), desc: t('market2Desc') },
     { title: t('market3Title'), desc: t('market3Desc') },
     { title: t('market4Title'), desc: t('market4Desc') },
-    { title: 'Plataformas digitales', desc: t('market1Desc') },
-    { title: 'Empresas que venden o cobran en otros países', desc: t('market1Desc') },
+    { title: t('market5Title'), desc: t('market5Desc') },
+    { title: t('market6Title'), desc: t('market6Desc') },
   ];
 
   useEffect(() => {

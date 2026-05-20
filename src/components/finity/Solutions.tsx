@@ -263,14 +263,14 @@ export const Solutions = () => {
                   className="px-6 py-2 rounded-full border border-white/20 hover:border-cyan-400/50 text-white transition-colors"
                   style={{ fontSize: 'var(--button-medium)', fontWeight: 600 }}
                 >
-                  ← Anterior
+                  ← {t('mobilePrev')}
                 </button>
                 <button
                   onClick={() => handleMobileSwipe('next')}
                   className="px-6 py-2 rounded-full border border-white/20 hover:border-cyan-400/50 text-white transition-colors"
                   style={{ fontSize: 'var(--button-medium)', fontWeight: 600 }}
                 >
-                  Siguiente →
+                  {t('mobileNext')} →
                 </button>
               </div>
             </div>

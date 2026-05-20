@@ -1,8 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { LanguageProvider } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Privacy = () => {
   const { language } = useLanguage();
@@ -57,7 +56,15 @@ const Privacy = () => {
           <p className="mt-8 text-muted-foreground text-sm">{lang.updated}</p>
         </div>
       </main>
-      <Footer />
+      <footer className="border-t border-white/10 bg-black py-8 mt-8">
+        <div className="container mx-auto px-4 max-w-3xl flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/40" style={{ fontSize: '14px' }}>© 2026 Plixum. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
+          <div className="flex gap-6">
+            <Link to="/terms-of-service" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>{language === 'es' ? 'Términos y condiciones' : 'Terms and Conditions'}</Link>
+            <Link to="/faq" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>FAQ</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

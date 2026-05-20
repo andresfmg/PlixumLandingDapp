@@ -1,7 +1,9 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/finity/Hero';
+import { HowItWorks } from '@/components/finity/HowItWorks';
 import { Solutions } from '@/components/finity/Solutions';
 import { Markets } from '@/components/finity/Markets';
+import { TrustSection } from '@/components/finity/TrustSection';
 import { APISection } from '@/components/finity/APISection';
 import { CTA } from '@/components/finity/CTA';
 import { LanguageProvider } from '@/contexts/LanguageContext';
@@ -13,8 +15,10 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <HowItWorks />
           <Solutions />
           <Markets />
+          <TrustSection />
           <APISection />
           <CTA />
         </main>

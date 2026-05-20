@@ -102,12 +102,12 @@ export const RegistrationForm = () => {
   }, []);
 
   const paymentSolutions = [
-    { value: 'local_payments', label: language === 'es' ? 'Pagos locales' : 'Local payments' },
-    { value: 'international_payments', label: language === 'es' ? 'Pagos internacionales' : 'International payments' },
-    { value: 'both_payments', label: language === 'es' ? 'Ambos pagos' : 'Both payments' },
-    { value: 'digital_assets', label: language === 'es' ? 'Activos Digitales AutoCustodiados' : 'Self-Custodial Digital Assets' },
-    { value: 'digital_accounts', label: language === 'es' ? 'Cuentas Digitales en USA/EUR/BRA/MXN/COL' : 'Digital Accounts in USA/EUR/BRA/MXN/COL' },
-    { value: 'apy_dollar_euro', label: language === 'es' ? 'APY en dólares/Euros' : 'APY in Dollars/Euros' },
+    { value: 'global_collections', label: language === 'es' ? 'Recaudo global (ACH, SEPA, PIX, SPEI, Wire)' : 'Global collections (ACH, SEPA, PIX, SPEI, Wire)' },
+    { value: 'cross_border_payouts', label: language === 'es' ? 'Payouts transfronterizos' : 'Cross-border payouts' },
+    { value: 'multicurrency_treasury', label: language === 'es' ? 'Tesorería multi-moneda' : 'Multi-currency treasury' },
+    { value: 'fx_settlement', label: language === 'es' ? 'On-ramp, Off-ramp y conversión de divisas' : 'On-ramp, Off-ramp and FX conversion' },
+    { value: 'payment_automation', label: language === 'es' ? 'Automatización de flujos financieros' : 'Financial workflow automation' },
+    { value: 'embedded_finance', label: language === 'es' ? 'Infraestructura financiera embebida para mi plataforma' : 'Embedded financial infrastructure for my platform' },
   ];
 
   const referralSources = [

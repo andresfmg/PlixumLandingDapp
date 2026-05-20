@@ -9,6 +9,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Privacy from "./pages/Privacy";
 import PolicySagrilaft from "./pages/PolicySagrilaft";
 import KycComplete from "./pages/KycComplete";
+import FAQ from "./pages/FAQ";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/policy-sagrilaft" element={<PolicySagrilaft />} />
               <Route path="/kyc-complete" element={<KycComplete />} />
+              <Route path="/faq" element={<FAQ />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

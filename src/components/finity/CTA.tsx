@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { RegistrationForm } from './RegistrationForm';
+import { Link } from 'react-router-dom';
 
 export const CTA = () => {
   const { t } = useLanguage();
@@ -62,40 +63,47 @@ export const CTA = () => {
             {/* Contact section */}
             <div className="flex flex-col items-start justify-start">
               <p className="text-white font-semibold mb-4" style={{ fontSize: 'var(--paragraph-small)' }}>
-                Contáctanos
+                {t('contactTitle')}
               </p>
               <a 
                 href="mailto:info@plixum.com"
                 className="text-cyan-400 hover:text-cyan-300 no-underline transition-colors"
                 style={{ fontSize: 'var(--paragraph)', fontWeight: 400 }}
               >
-                Email Us
+                {t('contactEmailLabel')}
               </a>
             </div>
 
             {/* Links section */}
             <div className="flex flex-col items-start justify-start" style={{ gap: 'var(--gap-xs)' }}>
-              <a 
-                href="#"
+              <Link
+                to="/privacy"
                 className="text-white hover:text-cyan-400 no-underline transition-colors"
                 style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}
               >
-                Política de privacidad
-              </a>
-              <a 
-                href="#"
+                {t('footerPrivacy')}
+              </Link>
+              <Link
+                to="/terms-of-service"
                 className="text-white hover:text-cyan-400 no-underline transition-colors"
                 style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}
               >
-                Términos y condiciones
-              </a>
+                {t('footerTerms')}
+              </Link>
+              <Link
+                to="/faq"
+                className="text-white hover:text-cyan-400 no-underline transition-colors"
+                style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}
+              >
+                FAQ
+              </Link>
             </div>
           </div>
 
           {/* Footer bottom */}
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60" style={{ fontSize: 'var(--paragraph-small)' }}>
-              © 2026 Plixum. Todos los derechos reservados.
+              © 2026 Plixum. {t('footerRights')}
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">
