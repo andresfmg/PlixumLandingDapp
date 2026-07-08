@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Global - Oportunidad Mundial</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .slide-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .title {
+            font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #2E5266, #6E8898, #4A90E2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            color: #5A6C7D;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /*gap: 50px;*/
+        }
+        
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .chart-center-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .center-amount {
+            font-size: 20px;
+            font-weight: 800;
+            color: #4facfe;
+            margin-bottom: 5px;
+        }
+        
+        .center-label {
+            font-size: 16px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border-radius: 15px;
+            /*padding: 10px;*/
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .legend-item:hover {
+            transform: translateX(5px);
+            background: #f1f5f9;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid #e5e7eb;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .legend-content {
+            flex: 1;
+        }
+        
+        .legend-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-amount {
+            font-size: 18px;
+            font-weight: 700;
+            color: #4facfe;
+            margin-bottom: 3px;
+        }
+        
+        .legend-desc {
+            font-size: 12px;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+        
+        .legend-percentage {
+            font-size: 24px;
+            font-weight: 800;
+            color: #374151;
+            margin-left: 10px;
+        }
+        
+        .opportunity {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .source {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        .comparison-note {
+            background: lavender;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #5A6C7D;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .chart-wrapper {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .title {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chart-wrapper {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .center-amount {
+                font-size: 18px;
+            }
+            
+            .legend-item {
+                padding: 15px;
+            }
+            
+            .slide-container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1 class="title">Global Market</h1>
+            <p class="subtitle">Oportunidad Mundial de Migración de Capital</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <canvas id="pieChart"></canvas>
+                    <div class="chart-center-info">
+                        <div class="center-amount">USD 152.73T</div>
+                        <div class="center-label">Total Global</div>
+                    </div>
+                </div>
+                                
+                <div class="comparison-note">
+                    💡 Oportunidad de crecimiento Defi ( Crypto y Defi es de 1.6% ).</br> Colombia representa solo el 0.15% del mercado global de inversión, 
+                </div>
+                
+                <div class="source">
+                    <strong>Fuentes:</strong> World Bank, IMF, McKinsey Global Institute | Datos 2024
+                </div>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #38ef7d;"></div>
+                    <div class="legend-content">
+                        <div class="legend-title">📈 Fondos de Inversión Tradicionales</div>
+                        <div class="legend-amount">USD 100T</div>
+                        <div class="legend-desc">Mutual Funds, ETFs, Hedge Funds y productos de inversión convencionales.</div>
+                    </div>
+                    <div class="legend-percentage">65.6%</div>
+                </div>
+                
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #11998e;"></div>
+                    <div class="legend-content">
+                        <div class="legend-title">💰 Depósitos y Cuentas de Ahorro</div>
+                        <div class="legend-amount">USD 50T</div>
+                        <div class="legend-desc">Mercado global de depósitos y cuentas de ahorro tradicionales con rentabilidades bajas.</div>
+                    </div>
+                    <div class="legend-percentage">32.8%</div>
+                </div>
+                
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #8a2be2;"></div>
+                    <div class="legend-content">
+                        <div class="legend-title">�?Criptomonedas y DeFi</div>
+                        <div class="legend-amount">USD 2.5T</div>
+                        <div class="legend-desc">Mercado emergente pero aún pequeño comparado con finanzas tradicionales.</div>
+                    </div>
+                    <div class="legend-percentage">1.6%</div>
+                </div>
+                
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffc107;"></div>
+                    <div class="legend-content">
+                        <div class="legend-title">🇨🇴 Mercado Colombiano</div>
+                        <div class="legend-amount">USD 0.23T</div>
+                        <div class="legend-desc">Total del mercado financiero colombiano (pensiones, CDTs, bolsa, fondos).</div>
+                    </div>
+                    <div class="legend-percentage">0.15%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuración del gráfico
+        const ctx = document.getElementById('pieChart').getContext('2d');
+        
+        const data = {
+            labels: ['Fondos Tradicionales', 'Depósitos Globales', 'DeFi Global', 'Colombia'],
+            datasets: [{
+                data: [65.6, 32.8, 1.6, 0.15],
+                backgroundColor: [
+                    '#38ef7d',
+                    '#11998e',
+                    '#8a2be2',
+                    '#ffc107'
+                ],
+                borderColor: 'rgba(255, 255, 255, 0.3)',
+                borderWidth: 3,
+                hoverBorderWidth: 4,
+                hoverBorderColor: 'rgba(255, 255, 255, 0.6)'
+            }]
+        };
+        
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                        borderColor: 'rgba(255, 255, 255, 0.3)',
+                        borderWidth: 1,
+                        cornerRadius: 10,
+                        displayColors: true,
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label;
+                                const value = context.parsed;
+                                const amounts = ['USD 100T', 'USD 50T', 'USD 2.5T', 'USD 0.23T'];
+                                return [
+                                    label + ': ' + value + '%',
+                                    amounts[context.dataIndex]
+                                ];
+                            }
+                        }
+                    }
+                },
+                elements: {
+                    arc: {
+                        borderWidth: 3,
+                        hoverBorderWidth: 4
+                    }
+                },
+                animation: {
+                    animateRotate: true,
+                    animateScale: true,
+                    duration: 1500,
+                    easing: 'easeInOutQuart'
+                },
+                cutout: '45%',
+                radius: '90%'
+            }
+        };
+        
+        // Crear el gráfico
+        const pieChart = new Chart(ctx, config);
+        
+        // Interactividad con la leyenda
+        const legendItems = document.querySelectorAll('.legend-item');
+        
+        legendItems.forEach((item, index) => {
+            item.addEventListener('mouseenter', () => {
+                // Resaltar segmento del gráfico
+                pieChart.setActiveElements([{
+                    datasetIndex: 0,
+                    index: index
+                }]);
+                pieChart.update('none');
+                
+                // Efecto visual en la leyenda
+                legendItems.forEach((otherItem, otherIndex) => {
+                    if (otherIndex !== index) {
+                        otherItem.style.opacity = '0.5';
+                    }
+                });
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                // Resetear gráfico
+                pieChart.setActiveElements([]);
+                pieChart.update('none');
+                
+                // Resetear leyenda
+                legendItems.forEach(otherItem => {
+                    otherItem.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

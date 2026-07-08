@@ -21,9 +21,9 @@ const providers = [
     nameKey: 'infra3Name',
     roleKey: 'infra3Role',
     capabilitiesKey: 'infra3Caps',
-    badge: 'DeFi Liquidity',
+    badge: 'Digital Liquidity',
     color: '#6ceac7',
-    rails: ['Stablecoin Swaps', 'Routing Óptimo', 'Liquidez Descentralizada'],
+    rails: ['Asset Swaps', 'Optimal Routing', 'Digital Liquidity'],
   },
 ];
 

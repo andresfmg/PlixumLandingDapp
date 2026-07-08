@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { Link } from 'react-router-dom';
 
 const Privacy = () => {
@@ -10,7 +11,7 @@ const Privacy = () => {
         title: 'Política de Privacidad de Plixum',
         intro: `<b>Solutek Soluciones Integrales S.A.S.</b> (NIT: 900524319-8), en adelante "Plixum", reconoce la importancia de la privacidad y protección de los datos personales de sus usuarios. Esta Política de Privacidad describe de manera íntegra cómo recopilamos, usamos, almacenamos, transferimos y protegemos tu información al utilizar nuestros servicios digitales y la página web <b>plixum.com</b>.`,
         sections: [
-          { heading: '1. Responsable del Tratamiento', body: `El responsable del tratamiento de tus datos personales es <b>Solutek Soluciones Integrales S.A.S.</b> (Plixum), NIT 900524319-8, con domicilio en Medellín, Colombia.` },
+          { heading: '1. Responsable del Tratamiento', body: `El responsable del tratamiento de tus datos personales es <b>Solutek Soluciones Integrales S.A.S.</b> (Plixum), NIT 900524319-8, con domicilio en Colombia.` },
           { heading: '2. Datos que Recopilamos', body: `Recopilamos información personal como nombre, apellidos, correo electrónico, dirección, teléfono, documentos de identidad, información financiera, datos de navegación, dirección IP, cookies, y cualquier otro dato necesario para la prestación de nuestros servicios.` },
           { heading: '3. Finalidad del Tratamiento', body: `Tus datos personales serán tratados para: (i) la prestación de servicios contratados; (ii) gestión de cuentas y usuarios; (iii) cumplimiento de obligaciones legales y regulatorias; (iv) análisis estadístico y de comportamiento; (v) envío de comunicaciones, promociones y novedades; (vi) prevención de fraude y lavado de activos; (vii) atención de solicitudes, quejas y reclamos.` },
           { heading: '4. Transferencia y Encargo de Datos', body: `Podemos compartir tus datos con terceros aliados, proveedores, autoridades regulatorias y judiciales, siempre bajo estrictos estándares de seguridad y confidencialidad. La transferencia internacional de datos se realizará conforme a la legislación aplicable.` },
@@ -26,7 +27,7 @@ const Privacy = () => {
         title: 'Plixum Privacy Policy',
         intro: `<b>Solutek Soluciones Integrales S.A.S.</b> (NIT: 900524319-8), hereinafter "Plixum", recognizes the importance of privacy and protection of users' personal data. This Privacy Policy fully describes how we collect, use, store, transfer, and protect your information when using our digital services and the website <b>plixum.com</b>.`,
         sections: [
-          { heading: '1. Data Controller', body: `The data controller is <b>Solutek Soluciones Integrales S.A.S.</b> (Plixum), NIT 900524319-8, based in Medellín, Colombia.` },
+          { heading: '1. Data Controller', body: `The data controller is <b>Solutek Soluciones Integrales S.A.S.</b> (Plixum), NIT 900524319-8, based in Colombia.` },
           { heading: '2. Data We Collect', body: `We collect personal information such as name, surname, email, address, phone, identity documents, financial information, browsing data, IP address, cookies, and any other data necessary for providing our services.` },
           { heading: '3. Purpose of Processing', body: `Your personal data will be processed for: (i) provision of contracted services; (ii) account and user management; (iii) compliance with legal and regulatory obligations; (iv) statistical and behavioral analysis; (v) sending communications, promotions, and news; (vi) fraud and money laundering prevention; (vii) handling requests, complaints, and claims.` },
           { heading: '4. Data Sharing and Processing', body: `We may share your data with allied third parties, providers, regulatory and judicial authorities, always under strict security and confidentiality standards. International data transfers will be carried out in accordance with applicable law.` },
@@ -56,15 +57,7 @@ const Privacy = () => {
           <p className="mt-8 text-muted-foreground text-sm">{lang.updated}</p>
         </div>
       </main>
-      <footer className="border-t border-white/10 bg-black py-8 mt-8">
-        <div className="container mx-auto px-4 max-w-3xl flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40" style={{ fontSize: '14px' }}>© 2026 Plixum. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
-          <div className="flex gap-6">
-            <Link to="/terms-of-service" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>{language === 'es' ? 'Términos y condiciones' : 'Terms and Conditions'}</Link>
-            <Link to="/faq" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>FAQ</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

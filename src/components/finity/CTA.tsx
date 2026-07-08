@@ -3,7 +3,7 @@ import { RegistrationForm } from './RegistrationForm';
 import { Link } from 'react-router-dom';
 
 export const CTA = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
@@ -49,7 +49,7 @@ export const CTA = () => {
       </section>
 
       {/* SECCIÓN: FOOTER */}
-      <footer className="relative w-full bg-black text-white overflow-hidden" style={{ paddingTop: 'var(--padding-section-y)', paddingBottom: 'var(--padding-section-y)', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+      <footer className="relative w-full bg-black text-white" style={{ paddingTop: 'var(--padding-section-y)', paddingBottom: '48px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
         <div className="finity-container">
           {/* Footer content grid */}
           <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 'var(--gap-large)' }}>
@@ -91,6 +91,13 @@ export const CTA = () => {
                 {t('footerTerms')}
               </Link>
               <Link
+                to="/policy-sagrilaft"
+                className="text-white hover:text-cyan-400 no-underline transition-colors"
+                style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}
+              >
+                {language === 'es' ? 'Política SAGRILAFT' : 'SAGRILAFT Policy'}
+              </Link>
+              <Link
                 to="/faq"
                 className="text-white hover:text-cyan-400 no-underline transition-colors"
                 style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}
@@ -113,6 +120,15 @@ export const CTA = () => {
                 Twitter
               </a>
             </div>
+          </div>
+
+          {/* Regulatory disclaimer */}
+          <div className="border-t border-white/10 mt-8 pt-6">
+            <p className="text-white/60 text-center" style={{ fontSize: '12px', lineHeight: '1.7' }}>
+              {language === 'es'
+                ? 'Plixum es un producto de Solutek Soluciones Integrales S.A.S. (NIT: 900524319-8), empresa de tecnología constituida en Colombia. Solutek es un proveedor de tecnología y no presta ni ofrece servicios financieros. Solutek Soluciones Integrales S.A.S. (i) no lleva a cabo ningún tipo de actividad propia de las entidades financieras que requieren autorización para su funcionamiento; (ii) no realiza actividades de captación de dinero conforme con la normativa colombiana; (iii) no está vigilada por la Superintendencia Financiera de Colombia (SFC). Plixum actúa como plataforma tecnológica de orquestación de pagos. Las operaciones fiat son procesadas por Bridge.xyz, entidad regulada en EE.UU. El usuario es responsable de sus obligaciones cambiarias y tributarias.'
+                : 'Plixum is a product of Solutek Soluciones Integrales S.A.S. (NIT: 900524319-8), a technology company incorporated in Colombia. Solutek is a technology provider and does not offer financial services. Solutek Soluciones Integrales S.A.S. (i) does not carry out any activity typical of financial entities that require authorization to operate; (ii) does not conduct money deposit-taking activities under Colombian regulations; (iii) is not supervised by the Superintendencia Financiera de Colombia (SFC). Plixum operates as a technology platform for payment orchestration. Fiat operations are processed by Bridge.xyz, a regulated entity in the United States. The user is responsible for their foreign exchange and tax obligations.'}
+            </p>
           </div>
         </div>
       </footer>

@@ -1,89 +1,70 @@
-import plixumLogo from '@/assets/plixum-logo.png';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Footer = () => {
-  const { language } = useLanguage();
-  const links = {
-    en: [
-      { href: '/faq', label: 'FAQ' },
-      { href: '/terms-of-service', label: 'Terms and Conditions' },
-      { href: '/privacy', label: 'Privacy Policy' },
-      { href: '/policy-sagrilaft', label: 'SAGRILAFT Policy' },
-    ],
-    es: [
-      { href: '/faq', label: 'Preguntas Frecuentes' },
-      { href: '/terms-of-service', label: 'Términos y condiciones de servicio' },
-      { href: '/privacy', label: 'Política de tratamiento de datos personales' },
-      { href: '/policy-sagrilaft', label: 'Política SAGRILAFT' },
-    ],
-  };
-  
-  return (
-    <footer className="relative z-6 border-t border-white/10 bg-black text-white overflow-hidden">
-      {/* Gradient circles background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -bottom-96 left-1/3" style={{ width: '2400px', height: '2400px', background: 'radial-gradient(circle, rgba(108, 234, 199, 0.05) 0%, transparent 70%)', filter: 'blur(40px)', mixBlendMode: 'screen' }}></div>
-      </div>
+  const { t, language } = useLanguage();
 
-      <div className="relative z-1 flex flex-col items-center w-full" style={{ paddingTop: '96px', paddingBottom: '56px' }}>
-        {/* CTA + Contact */}
-        <div className="flex flex-col items-center gap-60 w-full max-w-7xl" style={{ paddingLeft: '100px', paddingRight: '100px' }}>
-          {/* Main CTA */}
-          <div className="flex flex-col items-center gap-8 w-full">
-            <h2 className="text-center text-white font-bold leading-tight" style={{ fontSize: '50px', lineHeight: '1.3' }}>
-              Habla con nuestro equipo de clase mundial
-            </h2>
-            
-            <a 
-              href="/es/contacto"
-              className="z-5 flex gap-2 bg-gradient-to-r from-cyan-400 to-green-400 rounded-full flex-none justify-center items-center no-underline"
-              style={{ padding: '10px 24px' }}
+  return (
+    <footer className="relative w-full bg-black text-white" style={{ paddingTop: 'var(--padding-section-y)', paddingBottom: '48px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+      <div className="finity-container">
+        {/* 3-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 'var(--gap-large)' }}>
+          {/* Logo */}
+          <div className="flex flex-col items-start justify-start">
+            <div className="text-lg font-bold text-transparent bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text">
+              Plixum
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col items-start justify-start">
+            <p className="text-white font-semibold mb-4" style={{ fontSize: 'var(--paragraph-small)' }}>
+              {t('contactTitle')}
+            </p>
+            <a
+              href="mailto:info@plixum.com"
+              className="text-cyan-400 hover:text-cyan-300 no-underline transition-colors"
+              style={{ fontSize: 'var(--paragraph)', fontWeight: 400 }}
             >
-              <p className="text-black font-semibold" style={{ fontSize: '16px', lineHeight: '1.12' }}>
-                Agenda una llamada
-              </p>
+              {t('contactEmailLabel')}
             </a>
           </div>
 
-          {/* Footer info */}
-          <div className="w-full flex justify-between items-end pt-15 border-t border-white/10">
-            {/* Contact info */}
-            <div className="flex flex-col gap-4">
-              <p className="text-white" style={{ fontSize: '18px', fontWeight: 400 }}>
-                Contáctanos
-              </p>
-              <a 
-                href="mailto:info@plixum.com"
-                className="text-white hover:text-cyan-400 transition no-underline"
-                style={{ fontSize: '18px', fontWeight: 400 }}
-              >
-                info@plixum.com
-              </a>
-            </div>
-
-            {/* Footer links and copyright */}
-            <div className="flex justify-between items-center flex-1 ml-12">
-              {/* Legal links */}
-              <div className="flex gap-8">
-                {links[language].map((link, idx) => (
-                  <Link
-                    key={idx}
-                    to={link.href}
-                    className="text-white hover:text-cyan-400 transition no-underline underline"
-                    style={{ fontSize: '16px', fontWeight: 500 }}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-
-              {/* Copyright */}
-              <p className="text-white font-semibold text-right ml-auto" style={{ fontSize: '16px', fontWeight: 600 }}>
-                © 2026 Soluciones de Pagos y Recaudos SAS.
-              </p>
-            </div>
+          {/* Links */}
+          <div className="flex flex-col items-start justify-start" style={{ gap: 'var(--gap-xs)' }}>
+            <Link to="/privacy" className="text-white hover:text-cyan-400 no-underline transition-colors" style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}>
+              {t('footerPrivacy')}
+            </Link>
+            <Link to="/terms-of-service" className="text-white hover:text-cyan-400 no-underline transition-colors" style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}>
+              {t('footerTerms')}
+            </Link>
+            <Link to="/policy-sagrilaft" className="text-white hover:text-cyan-400 no-underline transition-colors" style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}>
+              {language === 'es' ? 'Política SAGRILAFT' : 'SAGRILAFT Policy'}
+            </Link>
+            <Link to="/faq" className="text-white hover:text-cyan-400 no-underline transition-colors" style={{ fontSize: 'var(--paragraph-small)', fontWeight: 400 }}>
+              FAQ
+            </Link>
           </div>
+        </div>
+
+        {/* Copyright + social */}
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-white/60" style={{ fontSize: 'var(--paragraph-small)' }}>
+            © 2026 Plixum. {t('footerRights')}
+          </p>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">Twitter</a>
+          </div>
+        </div>
+
+        {/* Regulatory disclaimer */}
+        <div className="border-t border-white/10 mt-8 pt-6">
+          <p className="text-white/60 text-center" style={{ fontSize: '12px', lineHeight: '1.7' }}>
+            {language === 'es'
+              ? 'Plixum es un producto de Solutek Soluciones Integrales S.A.S. (NIT: 900524319-8), empresa de tecnología constituida en Colombia. Solutek es un proveedor de tecnología y no presta ni ofrece servicios financieros. Solutek Soluciones Integrales S.A.S. (i) no lleva a cabo ningún tipo de actividad propia de las entidades financieras que requieren autorización para su funcionamiento; (ii) no realiza actividades de captación de dinero conforme con la normativa colombiana; (iii) no está vigilada por la Superintendencia Financiera de Colombia (SFC). Plixum actúa como plataforma tecnológica de orquestación de pagos. Las operaciones fiat son procesadas por Bridge.xyz, entidad regulada en EE.UU. El usuario es responsable de sus obligaciones cambiarias y tributarias.'
+              : 'Plixum is a product of Solutek Soluciones Integrales S.A.S. (NIT: 900524319-8), a technology company incorporated in Colombia. Solutek is a technology provider and does not offer financial services. Solutek Soluciones Integrales S.A.S. (i) does not carry out any activity typical of financial entities that require authorization to operate; (ii) does not conduct money deposit-taking activities under Colombian regulations; (iii) is not supervised by the Superintendencia Financiera de Colombia (SFC). Plixum operates as a technology platform for payment orchestration. Fiat operations are processed by Bridge.xyz, a regulated entity in the United States. The user is responsible for their foreign exchange and tax obligations.'}
+          </p>
         </div>
       </div>
     </footer>

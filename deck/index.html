@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nebulack - Deck</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    #slideFrame { width: 100vw; height: 100vh; border: none; }
+    #controls { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); }
+    button { padding: 10px 20px; margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <iframe id="slideFrame" src="0_intro.html"></iframe>
+
+  <div id="controls">
+    <button onclick="prevSlide()">< Anterior</button>
+    <button onclick="nextSlide()">Siguiente ></button>
+  </div>
+
+  <script>
+    const slides = [
+	
+	"0_intro.html",
+	"1_financial_problems_slide.html",
+	"2_defi_benefits_slide.html",
+	"3_local_market.html",
+	"4_global_market_slide.html",
+	"6_product_presentation.html",
+	"7_roadmap.html",
+	"8_arbitrage_resumen.html",
+	"9_arbitrage_detail.html",
+	"10_credit_card.html",
+	"0_intro.html",
+      // Agrega aquí todos tus archivos html
+    ];
+    let current = 0;
+
+    function showSlide(index) {
+      if (index >= 0 && index < slides.length) {
+        current = index;
+        document.getElementById('slideFrame').src = slides[current];
+      }
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+  </script>
+</body>
+</html>

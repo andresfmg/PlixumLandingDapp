@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitraje Clásico vs Atómico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+		
+		 .subtitle {
+            font-size: 1.3rem;
+            /*color: rgba(255, 255, 255, 0.9);*/
+            margin-bottom: 15px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /*background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .scenarios-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .scenario {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #e2e8f0;
+            position: relative;
+        }
+
+		.current-badge2 {
+			background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+			left: 73%;
+			color: white;
+			position: absolute;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			width: 10%;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		
+        .scenario h2 {
+            color: #2d3748;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Estilos del diseño original de arbitraje clásico */
+        .arbitrage-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /*margin: 50px 0;
+            gap: 20px;*/
+        }
+
+        .dex-segment {
+            position: relative;
+            display: flex;
+            align-items: center;
+            /*gap: 20px;*/
+        }
+
+        .dex-container {
+            border: 3px dashed #6c5ce7;
+            border-radius: 20px;
+            padding: 30px 40px;
+            background: rgba(108, 92, 231, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            min-width: 160px;
+        }
+
+        .dex-container.left {
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .dex-container.right {
+            border-left: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+       
+		
+		.dex-label {
+			position: absolute;
+			top: -12px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: white;
+			color: #6c5ce7;
+			padding: 2px 20px;
+			border-radius: 15px;
+			font-size: 0.9em;
+			font-weight: 600;
+			border: 2px solid #6c5ce7;
+		}
+
+        .profit-badge {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .profit-icon {
+            font-size: 12px;
+        }
+
+        .token {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .token:hover {
+            transform: scale(1.1);
+        }
+
+        .usdc {
+            background: linear-gradient(135deg, #2775ca, #1e5ba8);
+        }
+
+        .usdt {
+            background: linear-gradient(135deg, #26a17b, #1e8061);
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+        }
+
+        .arrow-icon {
+            width: 80px;
+            height: 3px;
+            background: #48bb78;
+            position: relative;
+            margin: 10px 0;
+        }
+		
+		.awwow-icon::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid #48bb78;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        .center-token {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .center-token::before {
+            content: '';
+            position: absolute;
+            left: -106px;
+            top: -45%;
+            transform: translateY(-50%);
+            width: 283px;
+            height: 0px;
+            border-top: 3px dashed #6c5ce7;
+        }
+
+        .center-token::after {
+            content: '';
+            position: absolute;
+            right: -106px;
+            top: 143%;
+            transform: translateY(-50%);
+            width: 283px;
+            height: 0px;
+            border-top: 3px dashed #6c5ce7;
+        }
+
+        .center-token .token::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 30px;
+            border-left: 3px dashed #6c5ce7;
+        }
+
+        .center-token .token::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 30px;
+            border-left: 3px dashed #6c5ce7;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .center-token .token {
+            animation: pulse 2s infinite;
+        }
+
+        .dex-text {
+            font-size: 10px;
+            color: #6c5ce7;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* Diseño de círculos más grande y limpio para atómico */
+        .currency-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .usdc-circle {
+            background: #2775ca;
+        }
+
+        .usdt-circle {
+            background: #26a17b;
+        }
+
+        .usdc-circle.profit {
+            position: relative;
+        }
+
+        .usdc-circle.profit::after {
+            content: '+';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #48bb78;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+        }
+
+        .usdc-circle.profit-atomic::after {
+            content: '++';
+            font-size: 1em;
+        }
+
+        /* Flujo atómico */
+        .atomic-container {
+            border: 2px dashed #48bb78;
+            border-radius: 15px;
+            padding: 25px;
+            background: rgba(72, 187, 120, 0.05);
+            position: relative;
+        }
+
+        .atomic-label {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: #48bb78;
+            padding: 2px 20px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+            border: 2px solid #48bb78;
+        }
+
+        .atomic-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+			gap: 20px;
+        }
+
+        .atomic-arrow {
+            width: 80px;
+            height: 3px;
+            background: #48bb78;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .atomic-arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid #48bb78;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        .atomic-arrow-label {
+            background: #48bb78;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            text-align: center;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+
+        .atomic-arrow-sublabel {
+            font-size: 0.7em;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Cajas de información */
+        .info-box {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid;
+        }
+
+        .risk-info {
+            background: rgba(255, 107, 107, 0.1);
+            border-left-color: #ff6b6b;
+            color: #c53030;
+        }
+
+        .advantage-info {
+            background: rgba(72, 187, 120, 0.1);
+            border-left-color: #48bb78;
+            color: #2f855a;
+        }
+
+        /* Tabla comparativa */
+        .comparison-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #e2e8f0;
+        }
+
+        .comparison-section h3 {
+            color: #2d3748;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f9fa;
+        }
+
+        tr:hover td {
+            background: #e6f3ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .scenarios-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .currency-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 1.1em;
+            }
+            
+            .atomic-flow {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .arbitrage-flow {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .dex-segment {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="title">What´s Next ?</h1>
+			<p class="subtitle">Atomic Transactions</p>
+			
+        <div class="scenarios-wrapper">
+		
+			
+		
+            <!-- Arbitraje Clásico -->
+            <div class="scenario">
+			<div class="current-badge2">Actual</div>
+                <h2>💰 Arbitraje por Fases</h2>
+                
+                <div class="arbitrage-flow">
+                    <!-- Primer segmento: DEX A -->
+                    <div class="dex-segment">
+                        <div class="dex-container left">
+                            <div class="dex-label">TRANSACTION</div>
+                            <div class="token usdc">USDC</div>
+                            <div class="profit-badge">
+                                <span class="profit-icon">⏳≥0.02%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="arrow-container">
+                            <div class="atomic-arrow-label">DEX A</div>
+                            <div class="atomic-arrow"></div>
+                            <div class="atomic-arrow-sublabel">Compra USDT</div>
+                        </div>
+                    </div>
+
+                    <!-- Token central USDT -->
+                    <div class="center-token">
+                        <div class="token usdt">USDT</div>
+                    </div>
+
+                    <!-- Segundo segmento: DEX B -->
+                    <div class="dex-segment">
+                        <div class="arrow-container">
+                            <div class="atomic-arrow-label">DEX B</div>
+                            <div class="atomic-arrow"></div>
+                            <div class="atomic-arrow-sublabel">Vende USDT</div>
+                        </div>
+                        
+                        <div class="dex-container right">
+                            <div class="dex-label">TRANSACTION</div>
+                            <div class="token usdc">USDC ++</div>
+                            <div class="profit-badge">
+                                <span class="profit-icon">⏳≥0.02%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box advantage-info">
+                    <strong>⚠️ Desventajas:</strong> Gas fees dobles, tiempos de espera por Cambios de precio entre transacciones(slippage) y MEV vulnerable.  
+                </div>
+            </div>
+            
+            <!-- Arbitraje Atómico -->
+            <div class="scenario">
+                <h2>⚡ Arbitraje Atómico</h2>
+                
+                <div class="atomic-container">
+                    <div class="atomic-label">TRANSACCIÓN ATÓMICA</div>
+                    
+                    <div class="atomic-flow">
+                        <div class="token usdc">USDC</div>
+                        
+                        <div class="arrow-container">
+                            <div class="atomic-arrow-label">DEX A</div>
+                            <div class="atomic-arrow"></div>
+                            <div class="atomic-arrow-sublabel">Compra USDT</div>
+                        </div>
+                        
+                        <div class="token usdt">USDT</div>
+                        
+                        <div class="arrow-container">
+                            <div class="atomic-arrow-label">DEX B</div>
+                            <div class="atomic-arrow"></div>
+                            <div class="atomic-arrow-sublabel">Vende USDT</div>
+                        </div>
+                        
+                        <div class="token usdc">USDC ++</div>
+                    </div>
+                    <div class="profit-badge">
+                                <span class="profit-icon">⏳ ≥ 0.02% & ⏳ ≥ 0.02%</span>
+                            </div>
+                   
+                </div>
+                
+                <div class="info-box advantage-info">
+                    <strong>✅ Ventajas:</strong> Gas fee único, operación garantizada, MEV Resistente.
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación suave para los círculos
+            const circles = document.querySelectorAll('.currency-circle, .token');
+            circles.forEach((circle, index) => {
+                circle.style.opacity = '0';
+                circle.style.transform = 'scale(0.8)';
+                
+                setTimeout(() => {
+                    circle.style.transition = 'all 0.6s ease';
+                    circle.style.opacity = '1';
+                    circle.style.transform = 'scale(1)';
+                }, index * 200);
+            });
+
+            // Animación de flechas
+            const arrows = document.querySelectorAll('.arrow, .atomic-arrow');
+            arrows.forEach((arrow, index) => {
+                arrow.style.transform = 'scaleX(0)';
+                arrow.style.transformOrigin = 'left';
+                
+                setTimeout(() => {
+                    arrow.style.transition = 'transform 0.8s ease';
+                    arrow.style.transform = 'scaleX(1)';
+                }, 500 + index * 300);
+            });
+
+            // Hover effects
+            circles.forEach(circle => {
+                circle.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.2)';
+                });
+                
+                circle.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 6px 20px rgba(0,0,0,0.15)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

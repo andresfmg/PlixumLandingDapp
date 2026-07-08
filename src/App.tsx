@@ -22,7 +22,7 @@ const App = () => (
       <Sonner />
       <ThemeProvider>
         <LanguageProvider>
-          <BrowserRouter>
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />

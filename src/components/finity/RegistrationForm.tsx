@@ -84,7 +84,11 @@ export const RegistrationForm = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch('https://api.nebulack.com/plixum/bridge/supported-countries');
+        const isDevMode = import.meta.env.DEV;
+        const countriesUrl = isDevMode
+          ? '/api/bridge/supported-countries'
+          : 'https://api.nebulack.com/plixum/bridge/supported-countries';
+        const response = await fetch(countriesUrl);
         if (response.ok) {
           const data = await response.json();
           if (data.success && data.countries) {
@@ -93,6 +97,53 @@ export const RegistrationForm = () => {
         }
       } catch (error) {
         console.error('Error fetching countries:', error);
+        // Fallback list with all 44 countries from bridge API
+        setCountries([
+          { country_code: 'COL', country_name: 'Colombia', compliance_status: 'Not High Risk' },
+          { country_code: 'USA', country_name: 'United States of America', compliance_status: 'Not High Risk' },
+          { country_code: 'BRA', country_name: 'Brazil', compliance_status: 'Not High Risk' },
+          { country_code: 'MEX', country_name: 'Mexico', compliance_status: 'Not High Risk' },
+          { country_code: 'ARG', country_name: 'Argentina', compliance_status: 'Not High Risk' },
+          { country_code: 'CHL', country_name: 'Chile', compliance_status: 'Not High Risk' },
+          { country_code: 'PER', country_name: 'Peru', compliance_status: 'Not High Risk' },
+          { country_code: 'ECU', country_name: 'Ecuador', compliance_status: 'Not High Risk' },
+          { country_code: 'CAN', country_name: 'Canada', compliance_status: 'Not High Risk' },
+          { country_code: 'DEU', country_name: 'Germany', compliance_status: 'Not High Risk' },
+          { country_code: 'FRA', country_name: 'France', compliance_status: 'Not High Risk' },
+          { country_code: 'ESP', country_name: 'Spain', compliance_status: 'Not High Risk' },
+          { country_code: 'ITA', country_name: 'Italy', compliance_status: 'Not High Risk' },
+          { country_code: 'NLD', country_name: 'Netherlands', compliance_status: 'Not High Risk' },
+          { country_code: 'BEL', country_name: 'Belgium', compliance_status: 'Not High Risk' },
+          { country_code: 'PRT', country_name: 'Portugal', compliance_status: 'Not High Risk' },
+          { country_code: 'AUT', country_name: 'Austria', compliance_status: 'Not High Risk' },
+          { country_code: 'FIN', country_name: 'Finland', compliance_status: 'Not High Risk' },
+          { country_code: 'SWE', country_name: 'Sweden', compliance_status: 'Not High Risk' },
+          { country_code: 'DNK', country_name: 'Denmark', compliance_status: 'Not High Risk' },
+          { country_code: 'POL', country_name: 'Poland', compliance_status: 'Not High Risk' },
+          { country_code: 'CZE', country_name: 'Czechia', compliance_status: 'Not High Risk' },
+          { country_code: 'HUN', country_name: 'Hungary', compliance_status: 'Not High Risk' },
+          { country_code: 'ROU', country_name: 'Romania', compliance_status: 'Not High Risk' },
+          { country_code: 'BGR', country_name: 'Bulgaria', compliance_status: 'Not High Risk' },
+          { country_code: 'GRC', country_name: 'Greece', compliance_status: 'Not High Risk' },
+          { country_code: 'IRL', country_name: 'Ireland', compliance_status: 'Not High Risk' },
+          { country_code: 'GBR', country_name: 'United Kingdom of Great Britain and Northern Ireland', compliance_status: 'Not High Risk' },
+          { country_code: 'CHE', country_name: 'Switzerland', compliance_status: 'Not High Risk' },
+          { country_code: 'LUX', country_name: 'Luxembourg', compliance_status: 'Not High Risk' },
+          { country_code: 'JPN', country_name: 'Japan', compliance_status: 'Not High Risk' },
+          { country_code: 'SGP', country_name: 'Singapore', compliance_status: 'Not High Risk' },
+          { country_code: 'HKG', country_name: 'Hong Kong', compliance_status: 'Not High Risk' },
+          { country_code: 'IND', country_name: 'India', compliance_status: 'Not High Risk' },
+          { country_code: 'IDN', country_name: 'Indonesia', compliance_status: 'Not High Risk' },
+          { country_code: 'THA', country_name: 'Thailand', compliance_status: 'Not High Risk' },
+          { country_code: 'MYS', country_name: 'Malaysia', compliance_status: 'Not High Risk' },
+          { country_code: 'PHL', country_name: 'Philippines', compliance_status: 'Not High Risk' },
+          { country_code: 'VNM', country_name: 'Vietnam', compliance_status: 'Not High Risk' },
+          { country_code: 'AUS', country_name: 'Australia', compliance_status: 'Not High Risk' },
+          { country_code: 'NZL', country_name: 'New Zealand', compliance_status: 'Not High Risk' },
+          { country_code: 'ZAF', country_name: 'South Africa', compliance_status: 'Restricted' },
+          { country_code: 'EGY', country_name: 'Egypt', compliance_status: 'Not High Risk' },
+          { country_code: 'NGA', country_name: 'Nigeria', compliance_status: 'Restricted' },
+        ]);
       } finally {
         setLoadingCountries(false);
       }
@@ -102,12 +153,12 @@ export const RegistrationForm = () => {
   }, []);
 
   const paymentSolutions = [
-    { value: 'global_collections', label: language === 'es' ? 'Recaudo global (ACH, SEPA, PIX, SPEI, Wire)' : 'Global collections (ACH, SEPA, PIX, SPEI, Wire)' },
-    { value: 'cross_border_payouts', label: language === 'es' ? 'Payouts transfronterizos' : 'Cross-border payouts' },
-    { value: 'multicurrency_treasury', label: language === 'es' ? 'Tesorería multi-moneda' : 'Multi-currency treasury' },
-    { value: 'fx_settlement', label: language === 'es' ? 'On-ramp, Off-ramp y conversión de divisas' : 'On-ramp, Off-ramp and FX conversion' },
-    { value: 'payment_automation', label: language === 'es' ? 'Automatización de flujos financieros' : 'Financial workflow automation' },
-    { value: 'embedded_finance', label: language === 'es' ? 'Infraestructura financiera embebida para mi plataforma' : 'Embedded financial infrastructure for my platform' },
+    { value: 'local_payments', label: language === 'es' ? 'Pagos locales' : 'Local payments' },
+    { value: 'international_payments', label: language === 'es' ? 'Pagos internacionales' : 'International payments' },
+    { value: 'both_payments', label: language === 'es' ? 'Pagos locales e internacionales' : 'Both local & international payments' },
+    { value: 'digital_assets', label: language === 'es' ? 'Activos digitales' : 'Digital assets' },
+    { value: 'digital_accounts', label: language === 'es' ? 'Cuentas digitales' : 'Digital accounts' },
+    { value: 'apy_dollar_euro', label: language === 'es' ? 'APY en dólares y euros' : 'APY in dollar & euro' },
   ];
 
   const referralSources = [
@@ -124,13 +175,18 @@ export const RegistrationForm = () => {
   ];
 
   const getCountryCode2Letter = (code3: string) => {
-    // Map of 3-letter codes to 2-letter codes for react-country-flag
     const map: {[key: string]: string} = {
       'COL': 'CO', 'USA': 'US', 'MEX': 'MX', 'BRA': 'BR', 'ARG': 'AR',
       'CHL': 'CL', 'PER': 'PE', 'ECU': 'EC', 'VEN': 'VE', 'PAN': 'PA',
       'CRI': 'CR', 'GTM': 'GT', 'SLV': 'SV', 'HND': 'HN', 'NIC': 'NI',
       'DOM': 'DO', 'CUB': 'CU', 'JAM': 'JM', 'ESP': 'ES', 'CAN': 'CA',
-      'GBR': 'GB', 'DEU': 'DE', 'FRA': 'FR', 'ITA': 'IT', 'PRT': 'PT'
+      'GBR': 'GB', 'DEU': 'DE', 'FRA': 'FR', 'ITA': 'IT', 'PRT': 'PT',
+      'NLD': 'NL', 'BEL': 'BE', 'AUT': 'AT', 'FIN': 'FI', 'SWE': 'SE',
+      'DNK': 'DK', 'POL': 'PL', 'CZE': 'CZ', 'HUN': 'HU', 'ROU': 'RO',
+      'BGR': 'BG', 'GRC': 'GR', 'IRL': 'IE', 'CHE': 'CH', 'LUX': 'LU',
+      'JPN': 'JP', 'SGP': 'SG', 'HKG': 'HK', 'IND': 'IN', 'IDN': 'ID',
+      'THA': 'TH', 'MYS': 'MY', 'PHL': 'PH', 'VNM': 'VN', 'AUS': 'AU',
+      'NZL': 'NZ', 'ZAF': 'ZA', 'EGY': 'EG', 'NGA': 'NG',
     };
     return map[code3] || code3.substring(0, 2);
   };
@@ -200,8 +256,7 @@ export const RegistrationForm = () => {
       const payload = {
         firstName: formData.firstName,
         lastName: formData.lastName,
-        // country: formData.country, // Not required by backend
-        // countryCode: formData.countryCode, // Not required by backend
+        country: formData.country,
         phoneNumber: formData.phoneNumber,
         email: formData.email,
         companyName: formData.companyName,
@@ -213,7 +268,11 @@ export const RegistrationForm = () => {
       };
 
       // Send to backend endpoint
-      const response = await fetch('https://api.nebulack.com/plixum/contactregistrations', {
+      const isDevMode = import.meta.env.DEV;
+      const submitUrl = isDevMode
+        ? '/api/contactregistrations'
+        : 'https://api.nebulack.com/plixum/contactregistrations';
+      const response = await fetch(submitUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -234,7 +293,7 @@ export const RegistrationForm = () => {
         throw new Error(data.message || 'Failed to submit form');
       }
 
-      setSubmitMessage(language === 'es' ? '¡Registro exitoso! Nos pondremos en contacto pronto.' : 'Registration submitted successfully! We\'ll contact you soon.');
+      setSubmitMessage(language === 'es' ? '¡Registro exitoso! Redirigiendo...' : 'Registration successful! Redirecting...');
       
       // Clear form but keep country defaults
       setFormData({
@@ -250,6 +309,11 @@ export const RegistrationForm = () => {
         referralSource: '',
         agreedToTerms: false,
       });
+
+      // Redirect to booking page after short delay
+      setTimeout(() => {
+        window.open('https://cal.com/plixum/30min?utm_source=plixum.com&utm_medium=form_submit', '_blank');
+      }, 1500);
     } catch (error: any) {
       const errorMessage = error.message || (language === 'es' ? 'Error al enviar el formulario. Por favor intenta de nuevo.' : 'Error submitting form. Please try again.');
       setSubmitError(errorMessage);
@@ -329,6 +393,7 @@ export const RegistrationForm = () => {
                     <SelectItem 
                       key={country.country_code} 
                       value={country.country_code}
+                      textValue={country.country_name}
                       className="focus:bg-white/20 focus:text-white cursor-pointer py-3 text-white"
                     >
                       <div className="flex items-center gap-3 w-full pr-4">
@@ -408,10 +473,16 @@ export const RegistrationForm = () => {
             {language === 'es' ? 'Sitio web de la empresa*' : 'Company Website*'}
           </label>
           <input
-            type="url"
+            type="text"
             name="websiteUrl"
             value={formData.websiteUrl}
             onChange={handleChange}
+            onBlur={(e) => {
+              const val = e.target.value.trim();
+              if (val && !val.startsWith('http://') && !val.startsWith('https://')) {
+                setFormData(prev => ({ ...prev, websiteUrl: 'https://' + val }));
+              }
+            }}
             className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition"
             placeholder="https://empresa.com"
           />
@@ -472,9 +543,29 @@ export const RegistrationForm = () => {
           className="mt-1 w-5 h-5 rounded border border-white/20 bg-white/10 cursor-pointer accent-cyan-400"
         />
         <label className="text-white font-bold text-sm cursor-pointer">
-          {language === 'es' 
-            ? 'Acepto los términos y condiciones y la política de privacidad*' 
-            : 'I agree to the terms and conditions and privacy policy*'}
+          {language === 'es' ? (
+            <>
+              Acepto los{' '}
+              <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300">
+                términos y condiciones
+              </a>{' '}
+              y la{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300">
+                política de privacidad
+              </a>*
+            </>
+          ) : (
+            <>
+              I agree to the{' '}
+              <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300">
+                terms and conditions
+              </a>{' '}
+              and{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline hover:text-cyan-300">
+                privacy policy
+              </a>*
+            </>
+          )}
         </label>
       </div>
 
@@ -501,7 +592,7 @@ export const RegistrationForm = () => {
       >
         {isSubmitting 
           ? (language === 'es' ? 'Enviando...' : 'Submitting...') 
-          : (language === 'es' ? 'Enviar' : 'Submit')}
+          : (language === 'es' ? '📅 Agendar llamada' : '📅 Book a call')}
       </button>
     </form>
   );

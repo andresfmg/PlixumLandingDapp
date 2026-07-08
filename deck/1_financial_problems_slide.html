@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falencias de Productos Financieros Tradicionales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .slide {
+            width: 1200px;
+            height: 675px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            /*box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);*/
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+		
+		
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+                font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #2E5266, #6E8898, #4A90E2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #5A6C7D;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            flex-grow: 1;
+        }
+
+        .problem-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 18px;
+			padding: 18px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+	
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12, #e67e22);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+		
+		
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            border-color: #3498db;
+        }
+
+        .icon {
+            font-size: 36px;
+			margin-bottom: 8px;
+			display: block;
+			animation: iconFloat 3s ease-in-out infinite;
+			filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+		
+		    
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .problem-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .problem-description {
+            font-size: 14px;
+            color: #5d6d7e;
+            line-height: 1.4;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .footer-text {
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Colores específicos para cada problema */
+        .problem-card:nth-child(1) .icon { color: #e74c3c; }
+        .problem-card:nth-child(2) .icon { color: #f39c12; }
+        .problem-card:nth-child(3) .icon { color: #e67e22; }
+        .problem-card:nth-child(4) .icon { color: #9b59b6; }
+        .problem-card:nth-child(5) .icon { color: #34495e; }
+        .problem-card:nth-child(6) .icon { color: #27ae60; }
+        .problem-card:nth-child(7) .icon { color: #16a085; }
+        .problem-card:nth-child(8) .icon { color: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="content">
+            <div class="header">
+                <h1 class="title">Problem</h1>
+                <p class="subtitle">Productos financieros tradicionales</p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="icon">📉</div>
+                    <div class="problem-title">Baja Rentabilidad</div>
+                    <div class="problem-description">Tasas menores a la inflación real, perdiendo poder adquisitivo</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">🔒</div>
+                    <div class="problem-title">Capital Bloqueado</div>
+                    <div class="problem-description">Plazos fijos rígidos (CDTs) sin flexibilidad de retiro</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">⏳</div>
+                    <div class="problem-title">Penalidades por Retiros</div>
+                    <div class="problem-description">Costos elevados por retirar fondos antes de tiempo</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">🏦</div>
+                    <div class="problem-title">Intermediarios Costosos</div>
+                    <div class="problem-description">Comisiones elevadas y costos ocultos que reducen ganancias</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">🗂️</div>
+                    <div class="problem-title">Burocracia Excesiva</div>
+                    <div class="problem-description">Trámites físicos, formularios extensos y procesos lentos</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">🇨🇴</div>
+                    <div class="problem-title">Riesgo de Devaluación</div>
+                    <div class="problem-description">Pérdida de valor real frente al dólar estadounidense</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">📅</div>
+                    <div class="problem-title">Horarios Restringidos</div>
+                    <div class="problem-description">No operan 24/7, limitando acceso y oportunidades</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="icon">💼</div>
+                    <div class="problem-title">Sin Interés Compuesto</div>
+                    <div class="problem-description">Requiere reinversión manual, perdiendo oportunidades</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

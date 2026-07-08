@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -271,19 +272,7 @@ const FAQContent = () => {
           </div>
         </div>
       </main>
-      <footer className="border-t border-white/10 py-8">
-        <div className="w-full max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40" style={{ fontSize: '14px' }}>© 2026 Plixum. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
-          <div className="flex gap-6">
-            <Link to="/privacy" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>
-              {language === 'es' ? 'Política de privacidad' : 'Privacy Policy'}
-            </Link>
-            <Link to="/terms-of-service" className="text-white/40 hover:text-cyan-400 transition-colors no-underline" style={{ fontSize: '14px' }}>
-              {language === 'es' ? 'Términos y condiciones' : 'Terms and Conditions'}
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
