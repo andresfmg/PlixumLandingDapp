@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <title>Términos y Condiciones / Terms of Service – Plixum</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 3px solid #1aa79b;
+            padding-bottom: 20px;
+        }
+        .logo { font-size: 1.6em; font-weight: 800; background: linear-gradient(90deg,#06b6d4,#22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+        h1 { color: #1aa79b; font-size: 2.2em; margin-bottom: 8px; }
+        .last-updated { color: #666; font-size: 0.9em; }
+        .lang-toggle {
+            display: flex; justify-content: center; gap: 8px; margin: 20px 0 32px;
+        }
+        .lang-btn {
+            padding: 6px 20px; border-radius: 20px; border: 2px solid #1aa79b;
+            cursor: pointer; font-size: 0.9em; font-weight: 600; transition: all .2s;
+            background: white; color: #1aa79b;
+        }
+        .lang-btn.active { background: #1aa79b; color: white; }
+        .company-info {
+            background-color: #f0f9f8; padding: 18px;
+            border-left: 4px solid #1aa79b; margin-bottom: 30px; border-radius: 4px;
+        }
+        .company-info p { margin-bottom: 6px; font-size: 0.95em; }
+        h2 { color: #1aa79b; font-size: 1.4em; margin-top: 36px; margin-bottom: 12px; }
+        p { margin-bottom: 14px; font-size: 0.97em; }
+        footer {
+            margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0;
+            text-align: center; font-size: 0.8em; color: #888; line-height: 1.6;
+        }
+        [data-lang] { display: none; }
+        [data-lang].visible { display: block; }
+        a { color: #1aa79b; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">Plixum</div>
+        <h1 id="page-title">Términos y Condiciones</h1>
+        <p class="last-updated" id="page-updated">Última actualización: Julio 2026</p>
+    </header>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('es')">Español</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- ESPAÑOL -->
+    <div data-lang="es" class="visible">
+        <div class="company-info">
+            <p><strong>Solutek Soluciones Integrales S.A.S.</strong> (NIT: 900524319-8), en adelante "Plixum", te da la bienvenida. Antes de cualquier relación con nosotros, te invitamos a leer y aceptar nuestros Términos y Condiciones ("T&amp;C"). Este documento regula el uso de nuestros servicios digitales y la página web <strong>plixum.com</strong>. Al acceder, registrarte, navegar, contratar nuestros servicios o disfrutar de nuestra plataforma, manifiestas tu adhesión libre y voluntaria a las condiciones aquí presentadas.</p>
+        </div>
+
+        <h2>0. Definiciones</h2>
+        <p>Para los efectos de estos T&amp;C, los siguientes términos tendrán el significado que se indica a continuación:<br><br>
+        <strong>Activo Digital:</strong> Representación digital de valor o derechos que puede transferirse, almacenarse o intercambiarse electrónicamente, incluyendo criptomonedas, stablecoins (USDC, EURC) y tokens digitales.<br>
+        <strong>API:</strong> Interfaz de Programación de Aplicaciones que permite la integración de software de terceros con la Plataforma Plixum.<br>
+        <strong>Bridge.xyz:</strong> Proveedor financiero regulado en Estados Unidos, responsable de la custodia fiat, cuentas virtuales y operación de rails bancarios internacionales (ACH, SEPA, Wire).<br>
+        <strong>Cuenta Virtual:</strong> Cuenta bancaria virtual provista por un proveedor regulado que permite recibir pagos internacionales mediante rails como ACH, SEPA, Wire, PIX y SPEI.<br>
+        <strong>Fork:</strong> Cambio en las reglas del protocolo de una red blockchain que resulta en la creación de una o más versiones relacionadas de la red original.<br>
+        <strong>KYC/KYB:</strong> Know Your Customer / Know Your Business — proceso de verificación de identidad exigido por normativas AML.<br>
+        <strong>Off-Ramp:</strong> Proceso de conversión de activos digitales a moneda fiat.<br>
+        <strong>On-Ramp:</strong> Proceso de conversión de moneda fiat a activos digitales.<br>
+        <strong>Payout:</strong> Desembolso o transferencia de fondos a terceros mediante rails bancarios o blockchain.<br>
+        <strong>Plataforma:</strong> El conjunto de servicios digitales, software, APIs y funcionalidades ofrecidos por Plixum a través de plixum.com.<br>
+        <strong>Rails de Pago:</strong> Infraestructura bancaria internacional para transferencias de fondos, incluyendo ACH, SEPA, Wire, PIX, SPEI y redes blockchain.<br>
+        <strong>Settlement:</strong> Proceso de liquidación final de una transacción financiera mediante el cual los fondos se transfieren de manera definitiva entre partes.<br>
+        <strong>Smart Contract:</strong> Contrato inteligente desplegado en la red Solana, controlado exclusivamente por el Usuario.<br>
+        <strong>Stablecoin:</strong> Activo digital cuyo valor está anclado a una moneda fiat (ej. USDC anclado al USD, EURC anclado al EUR).<br>
+        <strong>Tarifa de Uso:</strong> Comisión cobrada por Plixum exclusivamente por servicios tecnológicos de orquestación, integración y automatización financiera.<br>
+        <strong>Usuario:</strong> Persona natural o jurídica que accede y utiliza los Servicios de Plixum, habiendo completado el proceso de registro y verificación.<br>
+        <strong>Wallet:</strong> Cartera digital que almacena activos digitales; puede ser controlada por el Usuario (auto-custodia) o por un proveedor regulado.</p>
+
+        <h2>1. Ámbito de Aplicación</h2>
+        <p><strong>Plixum</strong> ofrece sus servicios digitales, productos, plataformas, software, APIs y demás funcionalidades bajo el término "Servicios". Estos servicios son ofrecidos por <strong>Solutek Soluciones Integrales S.A.S.</strong>, sociedad legalmente constituida en Colombia, con sede principal en Colombia y NIT 900524319-8.</p>
+
+        <h2>2. Aceptación y Responsabilidad del Usuario</h2>
+        <p>Al utilizar nuestros Servicios, asumes la responsabilidad de cumplir con estos T&amp;C. Al aceptar este documento, autorizas a Plixum para el tratamiento de tus datos personales conforme a nuestra Política de Tratamiento de Datos Personales y Aviso de Privacidad.</p>
+
+        <h2>3. Modificaciones</h2>
+        <p>Plixum podrá modificar estos T&amp;C en cualquier momento, de manera unilateral y sin previo aviso. Si no estás de acuerdo con las modificaciones, deberás interrumpir el uso y comunicarte con nosotros.</p>
+
+        <h2>4. Registro y Verificación</h2>
+        <p>Para acceder a los Servicios, deberás crear una cuenta de usuario y verificar tu identidad. Solicitaremos información personal (nombre, domicilio, documentos de identidad, información financiera) y realizaremos procesos de verificación KYC/KYT.</p>
+
+        <h2>5. Declaraciones y Garantías</h2>
+        <p>La información que proporciones debe ser exacta y veraz. Te comprometes a mantenerla actualizada. Confirmas que tienes la capacidad legal y las autorizaciones necesarias. No debes usar medios automatizados para acceder a los Servicios sin consentimiento expreso.</p>
+
+        <h2>6. Servicios y Operaciones</h2>
+        <p>Plixum facilita servicios de infraestructura financiera que incluyen: a) Recaudo de pagos globales mediante cuentas virtuales y rails bancarios regulados; b) Conversión y settlement entre monedas fiat y activos digitales a través de proveedores especializados; c) Payouts y transferencias a terceros; d) Automatización de flujos de tesorería. Plixum actúa como capa tecnológica de orquestación y no como banco, exchange, custodio financiero ni contraparte directa en las operaciones.</p>
+
+        <h2>7. Naturaleza del Servicio</h2>
+        <p>Plixum opera como plataforma de infraestructura tecnológica financiera y orquestación de pagos. <strong>Plixum no es una entidad vigilada por la Superintendencia Financiera de Colombia (SFC) ni por ninguna otra autoridad financiera.</strong> Los fondos del Usuario son procesados por proveedores financieros regulados integrados a la plataforma, principalmente <strong>Bridge.xyz</strong> (entidad regulada en Estados Unidos), quien actúa como custodio del fiat y opera los rails bancarios internacionales (ACH, SEPA, Wire). El Usuario mantiene una relación directa con Bridge.xyz a través del proceso KYC/KYB. Plixum actúa exclusivamente como capa tecnológica de orquestación. Los contratos inteligentes (smart contracts) del Usuario en la red Solana son controlados por el propio Usuario, quien custodia sus propios activos digitales. Plixum no tiene acceso ni control sobre los fondos alojados en los smart contracts del Usuario.<br><br><strong>Cuentas Segregadas:</strong> Los fondos fiat del Usuario son mantenidos en cuentas virtuales segregadas provistas por Bridge.xyz. Plixum no utiliza cuentas concentradoras ni mezcla fondos de distintos usuarios. Cada Usuario tiene una relación directa e individual con Bridge.xyz, y sus fondos se mantienen separados de los de otros usuarios y de los fondos propios de Plixum.</p>
+
+        <h2>8. Comisiones y Tarifas</h2>
+        <p>Las comisiones y tarifas de los Servicios se detallan en nuestros canales de comunicación y se actualizan periódicamente. Plixum cobra únicamente fees por servicios tecnológicos, orquestación, automatización e integración financiera. Los fondos del Usuario no son reconocidos como ingresos de Plixum.</p>
+
+        <h2>9. Obligaciones Tributarias, Cambiarias y Regulatorias</h2>
+        <p>El Usuario es responsable de cumplir con la totalidad de sus obligaciones tributarias, contables y cambiarias derivadas del uso de los Servicios, incluyendo pero sin limitarse a:<br><br>
+        <strong>a) Régimen Cambiario (Colombia):</strong> Los residentes en Colombia que reciban divisas del exterior o realicen giros internacionales a través de los Servicios deben cumplir con el régimen cambiario colombiano establecido por el Banco de la República (Resolución Externa 1 de 2018 y sus modificaciones). Plixum no actúa como Intermediario del Mercado Cambiario (IMC). El Usuario es responsable de canalizar, declarar y reportar sus operaciones de cambio ante las entidades competentes cuando así lo exija la normativa aplicable.<br><br>
+        <strong>b) Activos Virtuales y DIAN:</strong> Conforme al Decreto 1089 de 2023 y la normativa vigente, los ingresos, ganancias y transacciones con activos virtuales pueden generar obligaciones tributarias ante la DIAN. El Usuario es responsable de declarar sus operaciones ante la autoridad tributaria colombiana.<br><br>
+        <strong>c) Regulaciones Internacionales:</strong> Usuarios ubicados en jurisdicciones distintas a Colombia deben cumplir con la normativa local aplicable a operaciones con activos digitales y pagos internacionales.<br><br>
+        Plixum proporciona soporte documental (extractos, historial transaccional, reportes exportables) para facilitar la conciliación y auditoría del Usuario, pero no brinda asesoría contable, tributaria ni legal.</p>
+
+        <h2>10. Condiciones de Uso</h2>
+        <p>Eres responsable de la privacidad y seguridad de tu usuario y contraseña. Todas las operaciones financieras son finales y no reembolsables. Plixum puede suspender o cancelar tu cuenta ante incumplimientos.</p>
+
+        <h2>11. Cancelación de Cuentas</h2>
+        <p>Puedes solicitar la cancelación de tu cuenta en cualquier momento, siempre que no existan obligaciones pendientes ni saldos positivos. Plixum validará la solicitud y podrá retener activos hasta saldar obligaciones.</p>
+
+        <h2>12. Propiedad Intelectual</h2>
+        <p>Todo el contenido de Plixum (software, textos, gráficos, logos, signos distintivos, animaciones, sonidos) es propiedad exclusiva de Solutek Soluciones Integrales S.A.S. Está prohibida la reproducción, ingeniería inversa o manipulación sin autorización.</p>
+
+        <h2>13. Información Confidencial</h2>
+        <p>La información técnica, financiera, legal, comercial, know-how, clientes, socios y operaciones de Plixum es confidencial. Debes respetar la confidencialidad y evitar divulgaciones no autorizadas.</p>
+
+        <h2>14. Riesgos y Limitación de Responsabilidad</h2>
+        <p>Reconoces que Plixum opera como infraestructura tecnológica y depende de proveedores financieros regulados de terceros. Plixum no se hace responsable por fallas, interrupciones o pérdidas originadas en dichos proveedores o en las redes blockchain subyacentes. El Usuario asume los riesgos operativos, de tipo de cambio, de liquidez y regulatorios propios de las operaciones financieras globales. Las transacciones confirmadas en blockchain no son reversibles.<br><br>
+        <strong>Riesgos de Smart Contracts:</strong> Los smart contracts desplegados en la red Solana están sujetos a riesgos tecnológicos inherentes, incluyendo vulnerabilidades de código, errores de protocolo y comportamientos inesperados. Plixum no garantiza la ausencia de errores en los contratos inteligentes ni se hace responsable por pérdidas derivadas de fallas técnicas en la red Solana o en los protocolos DeFi integrados (Jupiter Exchange, entre otros).<br><br>
+        <strong>Custodia del Usuario:</strong> El Usuario es el único responsable de la seguridad de sus claves privadas y del acceso a su wallet. Si el Usuario pierde el acceso a su wallet o claves privadas, Plixum no puede recuperar los fondos. No existe mecanismo de recuperación centralizado para activos en smart contracts bajo custodia del Usuario.<br><br>
+        <strong>Forks y Cambios de Protocolo:</strong> Plixum no es propietaria ni controla los protocolos de software subyacentes que gobiernan la operación de los activos digitales, incluyendo la red Solana. Dichos protocolos están sujetos a cambios en sus reglas (denominados "forks"), los cuales pueden afectar materialmente el valor, función o disponibilidad de los activos digitales. Ante un fork, Plixum podrá suspender temporalmente los Servicios relacionados con el activo afectado y podrá decidir soportar únicamente una de las versiones resultantes del protocolo. Plixum no se hace responsable por pérdidas derivadas de forks o cambios en protocolos blockchain.<br><br>
+        <strong>Limitación Cuantitativa de Responsabilidad:</strong> En la máxima medida permitida por la ley aplicable, la responsabilidad total y agregada de Plixum frente al Usuario por cualquier concepto no excederá el monto de las tarifas efectivamente pagadas por el Usuario a Plixum durante los tres (3) meses anteriores al evento que dio origen a la reclamación. Plixum no será responsable por daños directos, indirectos, incidentales, especiales, consecuentes ni punitivos, incluyendo pérdidas de datos, de ingresos, de reputación o de oportunidades de negocio.</p>
+
+        <h2>15. Cumplimiento y SAGRILAFT</h2>
+        <p>Plixum opera bajo altos estándares de cumplimiento normativo, ajustándose a la legislación colombiana y lineamientos internacionales. Implementamos el Sistema de Administración y Gestión de Lavado de Activos, Financiación del Terrorismo y Financiamiento de la Proliferación de Armas de Destrucción Masiva (SAGRILAFT).</p>
+
+        <h2>16. Legislación Aplicable</h2>
+        <p>Estos T&amp;C se rigen por las leyes de la República de Colombia. Cualquier controversia será resuelta por los tribunales competentes de Colombia.</p>
+
+        <h2>17. Solución de Conflictos</h2>
+        <p>Las partes buscarán una solución amistosa ante cualquier conflicto. Si no se logra, la controversia se someterá a la jurisdicción de los jueces de Barranquilla.</p>
+
+        <h2>18. Vigencia</h2>
+        <p>Estos T&amp;C están vigentes desde el 01 de enero de 2024 y aplican a todos los Servicios realizados desde su publicación. Plixum podrá ajustarlos periódicamente.</p>
+
+        <h2>19. Aviso Regulatorio</h2>
+        <p><strong>Plixum (Solutek Soluciones Integrales S.A.S.) no es una entidad vigilada por la Superintendencia Financiera de Colombia (SFC), el Banco de la República, ni por ninguna otra autoridad financiera o de valores.</strong> Los servicios de infraestructura tecnológica ofrecidos por Plixum no constituyen captación masiva de dinero, intermediación financiera, custodia de valores, ni transmisión de dinero en los términos definidos por la legislación financiera colombiana. Las operaciones fiat internacionales son procesadas por <strong>Bridge.xyz</strong>, entidad regulada en los Estados Unidos. El Usuario declara conocer y aceptar estas condiciones, así como su responsabilidad de cumplir con las obligaciones cambiarias y tributarias que le sean aplicables en su jurisdicción.</p>
+
+        <h2>20. Ausencia de Asesoría</h2>
+        <p>Plixum no presta servicios de asesoría financiera, tributaria, contable, legal ni de inversión. Ninguna información, comunicación, funcionalidad de la plataforma, material de marketing o interacción con el equipo de Plixum debe interpretarse como asesoría profesional de ningún tipo. El Usuario reconoce que cualquier decisión financiera, operativa o de cumplimiento que tome en el marco del uso de los Servicios es de su exclusiva responsabilidad. En caso de requerir orientación especializada, el Usuario deberá consultar a un profesional independiente calificado en la materia correspondiente.</p>
+
+        <h2>21. Usos Inaceptables</h2>
+        <p>El Usuario no podrá utilizar los Servicios para: (a) realizar transacciones derivadas de actividades ilícitas o relacionadas con lavado de activos, financiación del terrorismo o cualquier actividad prohibida por la ley; (b) violar derechos de propiedad intelectual o industrial de terceros; (c) proporcionar información falsa, fraudulenta o engañosa durante el proceso de registro o en el uso de la Plataforma; (d) utilizar medios automatizados (bots, scrapers o spiders) para acceder a la Plataforma sin autorización expresa de Plixum; (e) intentar vulnerar, eludir o dañar los sistemas de seguridad de la Plataforma; (f) acceder a cuentas, sistemas o redes de otros usuarios sin autorización; (g) distribuir software malicioso, virus, troyanos o cualquier código dañino; (h) realizar operaciones destinadas a manipular precios de activos digitales en mercados; (i) evadir restricciones de listas sancionadas nacionales e internacionales (OFAC, ONU u otras aplicables); (j) sublicenciar, vender, revender o ceder el acceso a los Servicios sin autorización escrita previa de Plixum.</p>
+
+        <h2>22. Licencia de Uso</h2>
+        <p>Plixum otorga al Usuario una licencia personal, no exclusiva, no transferible y revocable para acceder y utilizar la Plataforma y los Servicios de conformidad con estos T&amp;C. Esta licencia no incluye el derecho a: (a) copiar, modificar o crear obras derivadas de la Plataforma o su software; (b) realizar ingeniería inversa, descompilar o desensamblar el software de Plixum; (c) sublicenciar, vender o transferir la licencia a terceros; (d) eliminar avisos de propiedad, derechos de autor o marcas comerciales de la Plataforma. Plixum se reserva todos los derechos no otorgados expresamente en estos T&amp;C. La licencia se extinguirá automáticamente si el Usuario incumple cualquier disposición de estos T&amp;C.</p>
+
+        <h2>23. Contacto</h2>
+        <p>Para consultas, contáctanos en <a href="mailto:info@plixum.com">info@plixum.com</a>.</p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang="en">
+        <div class="company-info">
+            <p><strong>Solutek Soluciones Integrales S.A.S.</strong> (NIT: 900524319-8), hereinafter "Plixum", welcomes you. Before any relationship with us, please read and accept our Terms and Conditions ("T&amp;C"). This document governs the use of our digital services and the website <strong>plixum.com</strong>. By accessing, registering, browsing, contracting our services, or using our platform, you freely and voluntarily adhere to the conditions presented here.</p>
+        </div>
+
+        <h2>0. Definitions</h2>
+        <p>For the purposes of these T&amp;C, the following terms shall have the meanings set out below:<br><br>
+        <strong>Digital Asset:</strong> Digital representation of value or rights that can be transferred, stored, or traded electronically, including cryptocurrencies, stablecoins (USDC, EURC), and digital tokens.<br>
+        <strong>API:</strong> Application Programming Interface enabling third-party software integration with the Plixum Platform.<br>
+        <strong>Bridge.xyz:</strong> Regulated financial provider in the United States, responsible for fiat custody, virtual accounts, and operation of international banking rails (ACH, SEPA, Wire).<br>
+        <strong>Virtual Account:</strong> Virtual bank account provided by a regulated provider enabling receipt of international payments through rails such as ACH, SEPA, Wire, PIX, and SPEI.<br>
+        <strong>Fork:</strong> A change in the protocol rules of a blockchain network resulting in the creation of one or more related versions of the original network.<br>
+        <strong>KYC/KYB:</strong> Know Your Customer / Know Your Business — identity verification process required by AML regulations.<br>
+        <strong>Off-Ramp:</strong> Process of converting digital assets to fiat currency.<br>
+        <strong>On-Ramp:</strong> Process of converting fiat currency to digital assets.<br>
+        <strong>Payout:</strong> Disbursement or transfer of funds to third parties via banking rails or blockchain.<br>
+        <strong>Platform:</strong> The complete set of digital services, software, APIs, and functionalities offered by Plixum through plixum.com.<br>
+        <strong>Payment Rails:</strong> International banking infrastructure for fund transfers, including ACH, SEPA, Wire, PIX, SPEI, and blockchain networks.<br>
+        <strong>Settlement:</strong> Final settlement process of a financial transaction whereby funds are definitively transferred between parties.<br>
+        <strong>Smart Contract:</strong> Intelligent contract deployed on the Solana network, controlled exclusively by the User.<br>
+        <strong>Stablecoin:</strong> Digital asset whose value is pegged to a fiat currency (e.g., USDC pegged to USD, EURC pegged to EUR).<br>
+        <strong>Usage Fee:</strong> Commission charged by Plixum exclusively for technology orchestration, integration, and financial automation services.<br>
+        <strong>User:</strong> Natural or legal person who accesses and uses Plixum Services, having completed the registration and verification process.<br>
+        <strong>Wallet:</strong> Digital wallet storing digital assets; may be user-controlled (self-custody) or managed by a regulated provider.</p>
+
+        <h2>1. Scope of Application</h2>
+        <p><strong>Plixum</strong> offers its digital services, products, platforms, software, APIs, and other functionalities under the term "Services". These services are provided by <strong>Solutek Soluciones Integrales S.A.S.</strong>, a legally established company in Colombia, headquartered in Colombia, NIT 900524319-8.</p>
+
+        <h2>2. Acceptance and User Responsibility</h2>
+        <p>By using our Services, you assume the responsibility to comply with these T&amp;C. By accepting this document, you authorize Plixum to process your personal data in accordance with our Personal Data Processing Policy and Privacy Notice.</p>
+
+        <h2>3. Modifications</h2>
+        <p>Plixum may modify these T&amp;C at any time, unilaterally and without prior notice. If you disagree with the modifications, you must stop using the platform and contact us.</p>
+
+        <h2>4. Registration and Verification</h2>
+        <p>To access the Services, you must create a user account and verify your identity. We will request personal information (name, address, identity documents, financial information) and conduct KYC/KYT verification processes.</p>
+
+        <h2>5. Declarations and Warranties</h2>
+        <p>The information you provide must be accurate and truthful. You commit to keeping it updated. You confirm that you have the legal capacity and necessary authorizations. You must not use automated means to access the Services without express consent.</p>
+
+        <h2>6. Services and Operations</h2>
+        <p>Plixum facilitates financial infrastructure services including: a) Global payment collection via regulated virtual accounts and banking rails; b) Conversion and settlement between fiat currencies and digital assets through specialized providers; c) Cross-border payouts and third-party transfers; d) Treasury workflow automation. Plixum acts as a technology orchestration layer and not as a bank, exchange, financial custodian, or direct counterpart in transactions.</p>
+
+        <h2>7. Nature of Service</h2>
+        <p>Plixum operates as a technology financial infrastructure and payment orchestration platform. <strong>Plixum is not an entity supervised by the Superintendencia Financiera de Colombia (SFC) or any other financial authority.</strong> User funds are processed by regulated financial providers integrated into the platform, primarily <strong>Bridge.xyz</strong> (a regulated entity in the United States), which acts as the fiat custodian and operates international banking rails (ACH, SEPA, Wire). The User maintains a direct relationship with Bridge.xyz through the KYC/KYB process. Plixum acts exclusively as a technology orchestration layer. The User's smart contracts on the Solana network are controlled by the User themselves, who self-custodies their own digital assets. Plixum has no access to or control over funds held in the User's smart contracts.<br><br><strong>Segregated Accounts:</strong> The User's fiat funds are held in segregated virtual accounts provided by Bridge.xyz. Plixum does not use pooled accounts or commingle funds from different users. Each User has a direct and individual relationship with Bridge.xyz, and their funds are kept separate from those of other users and from Plixum's own funds.</p>
+
+        <h2>8. Fees and Charges</h2>
+        <p>Service fees and charges are detailed in our communication channels and updated periodically. Plixum charges fees exclusively for technology services, orchestration, automation, and financial integration. User funds are not recognized as Plixum income.</p>
+
+        <h2>9. Tax, Exchange, and Regulatory Obligations</h2>
+        <p>The User is responsible for complying with all tax, accounting, and foreign exchange obligations derived from use of the Services, including but not limited to:<br><br>
+        <strong>a) Foreign Exchange Regime (Colombia):</strong> Colombian residents who receive foreign currency from abroad or make international transfers through the Services must comply with the Colombian foreign exchange regime established by the Banco de la República (External Resolution 1 of 2018 and its amendments). Plixum does not act as a Certified Foreign Exchange Intermediary (IMC). The User is responsible for channeling, declaring, and reporting their exchange operations to the competent authorities where required by applicable regulations.<br><br>
+        <strong>b) Virtual Assets and DIAN:</strong> Pursuant to Decree 1089 of 2023 and applicable regulations, income, gains, and transactions involving virtual assets may generate tax obligations before the DIAN. The User is responsible for declaring their operations to the Colombian tax authority.<br><br>
+        <strong>c) International Regulations:</strong> Users located in jurisdictions other than Colombia must comply with locally applicable regulations regarding digital asset operations and international payments.<br><br>
+        Plixum provides documentary support (statements, transaction history, exportable reports) to facilitate User reconciliation and auditing, but does not provide accounting, tax, or legal advice.</p>
+
+        <h2>10. Terms of Use</h2>
+        <p>You are responsible for the privacy and security of your username and password. All financial operations are final and non-refundable. Plixum may suspend or cancel your account in case of breaches.</p>
+
+        <h2>11. Account Cancellation</h2>
+        <p>You may request account cancellation at any time, provided there are no pending obligations or positive balances. Plixum will validate the request and may retain assets until obligations are settled.</p>
+
+        <h2>12. Intellectual Property</h2>
+        <p>All Plixum content (software, texts, graphics, logos, trademarks, animations, sounds) is the exclusive property of Solutek Soluciones Integrales S.A.S. Reproduction, reverse engineering, or manipulation without authorization is prohibited.</p>
+
+        <h2>13. Confidential Information</h2>
+        <p>Technical, financial, legal, commercial, know-how, client, partner, and operational information of Plixum is confidential. You must respect confidentiality and avoid unauthorized disclosures.</p>
+
+        <h2>14. Risks and Limitation of Liability</h2>
+        <p>You acknowledge that Plixum operates as a technology infrastructure layer and depends on regulated third-party financial providers. Plixum is not responsible for failures, interruptions, or losses originating from such providers or the underlying blockchain networks. The User assumes operational, foreign exchange, liquidity, and regulatory risks inherent to global financial operations. Transactions confirmed on blockchain are not reversible.<br><br>
+        <strong>Smart Contract Risks:</strong> Smart contracts deployed on the Solana network are subject to inherent technological risks, including code vulnerabilities, protocol errors, and unexpected behavior. Plixum does not guarantee the absence of errors in smart contracts and is not liable for losses resulting from technical failures in the Solana network or integrated DeFi protocols (Jupiter Exchange, among others).<br><br>
+        <strong>User Self-Custody:</strong> The User is solely responsible for the security of their private keys and wallet access. If the User loses access to their wallet or private keys, Plixum cannot recover the funds. There is no centralized recovery mechanism for assets in User-controlled smart contracts.<br><br>
+        <strong>Forks and Protocol Changes:</strong> Plixum does not own or control the underlying software protocols governing the operation of digital assets, including the Solana network. Such protocols are subject to changes in their rules (known as "forks"), which may materially affect the value, function, or availability of digital assets. In the event of a fork, Plixum may temporarily suspend Services related to the affected asset and may decide to support only one of the resulting protocol versions. Plixum is not liable for losses resulting from forks or blockchain protocol changes.<br><br>
+        <strong>Quantitative Liability Cap:</strong> To the maximum extent permitted by applicable law, Plixum's total aggregate liability to the User for any claim shall not exceed the fees effectively paid by the User to Plixum in the three (3) months preceding the event giving rise to the claim. Plixum shall not be liable for direct, indirect, incidental, special, consequential, or punitive damages, including loss of data, revenue, reputation, or business opportunities.</p>
+
+        <h2>15. Compliance and SAGRILAFT</h2>
+        <p>Plixum operates under high standards of regulatory compliance, adhering to Colombian law and international guidelines. We implement the System for the Administration and Management of Money Laundering, Terrorism Financing, and Financing of the Proliferation of Weapons of Mass Destruction (SAGRILAFT).</p>
+
+        <h2>16. Applicable Law</h2>
+        <p>These T&amp;C are governed by the laws of the Republic of Colombia. Any dispute will be resolved by the competent courts of Colombia.</p>
+
+        <h2>17. Dispute Resolution</h2>
+        <p>The parties will seek an amicable solution to any conflict. If not achieved, the dispute will be submitted to the jurisdiction of the courts of Colombia.</p>
+
+        <h2>18. Validity</h2>
+        <p>These T&amp;C are effective as of January 1, 2024 and apply to all Services performed since their publication. Plixum may adjust them periodically.</p>
+
+        <h2>19. Regulatory Notice</h2>
+        <p><strong>Plixum (Solutek Soluciones Integrales S.A.S.) is not an entity supervised by the Superintendencia Financiera de Colombia (SFC), the Banco de la República, or any other financial or securities authority.</strong> The technology infrastructure services offered by Plixum do not constitute mass deposit-taking, financial intermediation, securities custody, or money transmission as defined by Colombian financial legislation. International fiat operations are processed by <strong>Bridge.xyz</strong>, a regulated entity in the United States. The User acknowledges and accepts these conditions, as well as their responsibility to comply with any foreign exchange and tax obligations applicable in their jurisdiction.</p>
+
+        <h2>20. Absence of Advisory</h2>
+        <p>Plixum does not provide financial, tax, accounting, legal, or investment advisory services. No information, communication, platform functionality, marketing material, or interaction with the Plixum team should be interpreted as professional advice of any kind. The User acknowledges that any financial, operational, or compliance decision made in the context of using the Services is their sole responsibility. If specialized guidance is required, the User should consult an independent qualified professional in the relevant field.</p>
+
+        <h2>21. Unacceptable Use</h2>
+        <p>The User may not use the Services to: (a) conduct transactions derived from illegal activities or related to money laundering, terrorism financing, or any activity prohibited by law; (b) violate third-party intellectual property rights; (c) provide false, fraudulent, or misleading information during registration or use of the Platform; (d) use automated means (bots, scrapers, or spiders) to access the Platform without Plixum's express authorization; (e) attempt to compromise, circumvent, or damage the Platform's security systems; (f) access other users' accounts, systems, or networks without authorization; (g) distribute malware, viruses, trojans, or other harmful code; (h) conduct operations intended to manipulate digital asset prices in markets; (i) circumvent restrictions from national and international sanctioned lists (OFAC, UN, or other applicable lists); (j) sublicense, sell, resell, or transfer access to the Services without prior written authorization from Plixum.</p>
+
+        <h2>22. Platform License</h2>
+        <p>Plixum grants the User a personal, non-exclusive, non-transferable, and revocable license to access and use the Platform and Services in accordance with these T&amp;C. This license does not include the right to: (a) copy, modify, or create derivative works from the Platform or its software; (b) reverse engineer, decompile, or disassemble Plixum's software; (c) sublicense, sell, or transfer the license to third parties; (d) remove ownership notices, copyrights, or trademarks from the Platform. Plixum reserves all rights not expressly granted in these T&amp;C. The license will terminate automatically if the User breaches any provision of these T&amp;C.</p>
+
+        <h2>23. Contact</h2>
+        <p>For inquiries, contact us at <a href="mailto:info@plixum.com">info@plixum.com</a>.</p>
+    </div>
+
+    <footer>
+        <p>© 2026 Plixum · Solutek Soluciones Integrales S.A.S. (NIT: 900524319-8) · <a href="mailto:info@plixum.com">info@plixum.com</a></p>
+        <p style="margin-top:8px">Plixum es un proveedor de tecnología y no presta servicios financieros. No está vigilada por la SFC. Las operaciones fiat son procesadas por Bridge.xyz, entidad regulada en EE.UU.</p>
+    </footer>
+</div>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll("[data-lang]").forEach(el => el.classList.remove("visible"));
+    document.querySelector("[data-lang='" + lang + "']").classList.add("visible");
+    document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+    document.documentElement.lang = lang;
+    if (lang === "es") {
+        document.getElementById("page-title").textContent = "Términos y Condiciones";
+        document.getElementById("page-updated").textContent = "Última actualización: Julio 2026";
+    } else {
+        document.getElementById("page-title").textContent = "Terms and Conditions";
+        document.getElementById("page-updated").textContent = "Last updated: July 2026";
+    }
+}
+</script>
+</body>
+</html>
