@@ -161,7 +161,7 @@ const translations = {
     downloadDocs: 'Read Documentation',
     headerContact: 'Contact',
     headerDocs: 'Developers',
-    headerLogin: 'Login',
+    headerLogin: 'Login/Register',
   },
   es: {
     // Hero - Finity style
@@ -315,7 +315,7 @@ const translations = {
     downloadDocs: 'Leer Documentación',
     headerContact: 'Contacto',
     headerDocs: 'Developers',
-    headerLogin: 'Ingresar',
+    headerLogin: 'Ingresar/Registrarse',
   },
 };
 
