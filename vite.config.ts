@@ -5,7 +5,7 @@ import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 
 // Copia dist/index.html a dist/<ruta>/index.html para rutas de React Router que se
-// comparten como links directos (SAGRILAFT, privacidad). S3 (origen de Amplify Hosting)
+// comparten como links directos (SAGRILAFT, privacidad, términos). S3 (origen de Amplify Hosting)
 // redirige "/ruta" -> "/ruta/" cuando detecta un objeto bajo ese prefijo, y ese 301 no
 // pasa por la regla de fallback SPA (404-200) de Amplify -- resultado: 404 real en carga
 // directa aunque la ruta exista en el router. Al generar un objeto real en "<ruta>/index.html"
@@ -62,7 +62,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
-    mode !== "development" && deepLinkFallbackPlugin(["/privacy", "/policy-sagrilaft"]),
+    mode !== "development" && deepLinkFallbackPlugin(["/privacy", "/terms-of-service", "/policy-sagrilaft"]),
   ].filter(Boolean),
   resolve: {
     alias: {
